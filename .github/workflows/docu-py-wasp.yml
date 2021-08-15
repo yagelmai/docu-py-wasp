@@ -16,18 +16,11 @@ env:
   __NBTARGET_FILE: /nfs/site/gen/adm/netbatch/megafeeder/nbtarget/root/syssim_tc_pdx/.nbtarget
 
 jobs:
-  lint:
+  docu:
     runs-on: [self-hosted, ec]
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Check format
-      run: make lint
+    - name: docu-pywasp
+      run: make docu
 
-  test:
-    runs-on: [self-hosted, ec]
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Run unit tests
-      run: make test
