@@ -9,8 +9,9 @@ lint:
 		--max-line-length=120 --exclude=dev ./
 
 docu:
-	@echo "[ documentation_py_wasp ]"
-	@$(PYTHON)/Scripts/pdoc.exe --html py_wasp/py_wasp.py --overwrite
+	@echo "[ Flake8 ]"
+	@$(PYTHON)/bin/flake8 --ignore=D100,D101,D102,D103,D104,D105,D106,D107,D204,D205,D400,D401,D413,E241,W504,W605 \
+		--max-line-length=120 --exclude=dev ./
 
 test:
 	@echo "[ PyTest ]"
