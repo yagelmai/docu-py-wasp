@@ -1,0 +1,23 @@
+{
+    "records": {
+        "algorithm": {
+            "configuration": "algorithm.json",
+            "module": "test_algorithm"
+        },
+        "configuration": "configuration.json",
+        "cost": {
+            "configuration": null,
+            "module": "test_cost"
+        },
+        "reader": {
+            "configuration": null,
+            "module": "test_reader"
+        },
+        "runner": {
+            "configuration": null,
+            "module": "test_runner"
+        },
+        "study": "test_add_mutable_record_with_files",
+        "work_area": "wa"
+    }
+}

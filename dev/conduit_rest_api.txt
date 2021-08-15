@@ -1,0 +1,2 @@
+Wasp Rest API documented here:
+    http://icsl2630.iil.intel.com:2222/home/rest_api_docs

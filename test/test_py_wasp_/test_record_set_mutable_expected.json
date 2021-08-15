@@ -1,0 +1,8 @@
+{
+    "records": {
+        "conduit_locked": true,
+        "conduit_mutable": true,
+        "study": "test_record_set_mutable",
+        "work_area": "wa"
+    }
+}

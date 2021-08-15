@@ -1,0 +1,9 @@
+{
+    "_default": {
+        "duplicate": "1",
+        "kernel": "matern",
+        "num_init_points": "10",
+        "num_sobol_points": "200000",
+        "seed": "5"
+    }
+}

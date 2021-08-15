@@ -1,0 +1,20 @@
+{
+    "records": {
+        "algorithm": {
+            "configuration": "algorithm.json",
+            "module": "test_algorithm"
+        },
+        "configuration": "configuration.json",
+        "cost": {
+            "module": "test_cost"
+        },
+        "reader": {
+            "module": "test_reader"
+        },
+        "runner": {
+            "module": "test_runner"
+        },
+        "study": "test_add_record_with_files",
+        "work_area": "wa"
+    }
+}

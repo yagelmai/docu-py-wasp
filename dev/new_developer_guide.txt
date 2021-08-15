@@ -1,0 +1,30 @@
+Copy ".condarc" file to user home folder. You need these lines:
+    proxy_servers:
+        http: http://proxy-iil.intel.com:911
+        https: https://proxy-iil.intel.com:912
+		
+OR config conda proxy from command line (Same effect):
+	conda config --add proxy_servers.http http://proxy-iil.intel.com:911
+	conda config --add proxy_servers.https https://proxy-iil.intel.com:912
+
+Install Conda packages:
+	conda install flake8
+	conda install requests-kerberos
+
+Clone source repository:
+    git clone --recurse-submodules <repository>
+
+Fix changed windows password for git:
+    git config --global credential.helper wincred
+
+Generate html from docstrings:
+    C://Python37/Scripts/pdoc.exe --html pyconduit.py --overwrite
+
+    replace:
+        \r\n:return
+    with:
+        </p>\r\n<p>:return
+    replace:
+        \r\n:param
+    with:
+        </p>\r\n<p>:param

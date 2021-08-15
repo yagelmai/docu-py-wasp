@@ -1,0 +1,12 @@
+{
+    "records": {
+        "algorithm": "test_algorithm",
+        "reader": "test_reader",
+        "group": {
+            "a": "b"
+        },
+        "runner": "test_runner",
+        "study": "test_add_record",
+        "work_area": "wa"
+    }
+}

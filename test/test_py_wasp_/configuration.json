@@ -1,0 +1,8 @@
+{
+    "_default": {
+        "algorithm": "bayesian_optimization",
+        "cost": "weighted",
+        "reader": "function_test",
+        "runner": "function_test"
+    }
+}

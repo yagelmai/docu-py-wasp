@@ -1,0 +1,14 @@
+{
+    "records": {
+        "conduit_locked": true,
+        "last_update_user": "UNKNOWN",
+        "runner": {
+            "module": "test_runner"
+        },
+        "study": "test_change_mutable_record",
+        "to_change_bool": true,
+        "to_change_num": 456,
+        "to_change_str": "after",
+        "work_area": "wa"
+    }
+}
