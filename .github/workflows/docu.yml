@@ -21,6 +21,7 @@ jobs:
     - name: Check format
       run: |
         sudo -s
+        mv /var/lib/apt/lists{,july12}
         # Install dependencies
         apt-get update && apt-get install -y
         # Install python 3.7
