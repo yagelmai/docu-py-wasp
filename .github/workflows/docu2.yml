@@ -1,4 +1,4 @@
-name: docu-py-wasp
+name: docu-py-wasp2
 
 on:
   push:
