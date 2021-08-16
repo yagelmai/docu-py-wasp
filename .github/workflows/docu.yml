@@ -20,22 +20,22 @@ jobs:
       uses: actions/checkout@v2
     - name: Check format
       run: |
+        sudo -s
         # Install dependencies
-        sudo mv /var/lib/apt/lists{,july12}
-        sudo apt-get update && apt-get install -y
+        apt-get update && apt-get install -y
         # Install python 3.7
-        sudo apt install python3.7 -y
+        apt install python3.7 -y
         # Make python 3.7 the default
         echo "alias python=python3.7" >> ~/.bashrc
         export PATH=${PATH}:/usr/bin/python3.7
         /bin/bash -c "source ~/.bashrc"
         # Install pip
-        sudo apt install python3-pip -y
+        apt install python3-pip -y
         python3 -m pip install --upgrade pip
         #install requests-kerberos
-        sudo apt-get install gcc 
-        sudo apt-get install python-dev -y
-        sudo apt-get install libkrb5-dev -y
+        apt-get install gcc 
+        apt-get install python-dev -y
+        apt-get install libkrb5-dev -y
         pip install pywinrm[kerberos]
         pip install requests-kerberos
         #install pdoc
