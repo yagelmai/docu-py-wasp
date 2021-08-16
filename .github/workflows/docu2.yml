@@ -12,8 +12,18 @@ jobs:
   docu-py-wasp:
     runs-on: self-hosted
     steps:
-    - name: Checkout
+    - name: Checkout repo
       uses: actions/checkout@v2
+      
     - name: run pdoc
       run: pdoc --html py_wasp/py_wasp.py --overwrite
+      
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "yagelmai"
+        git config --global user.email "yagel.maimon@intel.com"
+
+        git add -A
+        git commit -m "commit message"
+        git push
 # vim: ts=2:sw=2
