@@ -35,10 +35,10 @@ jobs:
         sudo apt-get install gcc 
         sudo apt-get install python3-dev -y
         sudo apt-get install libkrb5-dev -y
-        pip install pywinrm
-        pip install requests-kerberos
     - name: run pdoc
       run: |
+        sudo pip install pywinrm
+        sudo pip install requests-kerberos
         sudo pip install pdoc3
         sudo pdoc --html py_wasp/py_wasp.py --overwrite
     - name: Commit and push changes
