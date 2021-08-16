@@ -1,0 +1,19 @@
+name: docu-py-wasp
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  docu-py-wasp:
+    runs-on: self-hosted
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: run pdoc
+      run: pdoc --html py_wasp/py_wasp.py --overwrite
+# vim: ts=2:sw=2
