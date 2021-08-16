@@ -10,10 +10,11 @@ on:
 
 jobs:
   docu-py-wasp:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+      
     - name: run pdoc
       run: |
         # Install dependencies
@@ -39,4 +40,11 @@ jobs:
         #install pdoc
         sudo pip install pdoc3
         sudo pdoc --html py_wasp/py_wasp.py --overwrite
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "yagelmai"
+        git config --global user.email "yagel.maimon@intel.com"
+        git add -A
+        git commit -m "create py_wasp documantation"
+        git push
 # vim: ts=2:sw=2
