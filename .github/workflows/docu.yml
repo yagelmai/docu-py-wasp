@@ -26,7 +26,7 @@ jobs:
         /bin/bash -c "source ~/.bashrc"
         # Install pip
         sudo apt install python3-pip -y
-        python3 -m pip install --upgrade pip
+        sudo python3 -m pip install --upgrade pip
         #install requests-kerberos
         sudo apt-get install gcc 
         sudo apt-get install python-dev -y
