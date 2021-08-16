@@ -14,10 +14,9 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Install xmllint
-      run: sudo apt-get install libxml2-utils
     - name: run pdoc
       run: |
+        sudo apt-get install libxml2-utils
         # Install dependencies
         sudo apt-get update && apt-get install -y
         
