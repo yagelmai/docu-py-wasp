@@ -31,9 +31,9 @@ jobs:
         python -m pip install --upgrade pip
         #install requests-kerberos
         sudo apt-get install gcc 
-        sudo apt-get install python-dev -y
+        sudo apt-get install python3-dev -y
         sudo apt-get install libkrb5-dev -y
-        pip install pywinrm[kerberos]
+        pip install pywinrm
         pip install requests-kerberos
         #install pdoc
         sudo pip install pdoc3
