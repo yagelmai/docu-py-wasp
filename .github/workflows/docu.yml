@@ -18,12 +18,14 @@ jobs:
       run: |
         # Install dependencies
         sudo apt-get update && apt-get install -y
+        
         # Install python 3.7
         sudo apt install python3.7 -y
+        
         # Make python 3.7 the default
         sudo echo "alias python=python3.7" >> ~/.bashrc
         sudo export PATH=${PATH}:/usr/bin/python3.7
-        /bin/bash -c "source ~/.bashrc"
+        sudo /bin/bash -c "source ~/.bashrc"
         # Install pip
         sudo apt install python3-pip -y
         sudo python3 -m pip install --upgrade pip
@@ -31,9 +33,9 @@ jobs:
         sudo apt-get install gcc 
         sudo apt-get install python-dev -y
         sudo apt-get install libkrb5-dev -y
-        pip install pywinrm[kerberos]
-        pip install requests-kerberos
+        sudo pip install pywinrm[kerberos]
+        sudo pip install requests-kerberos
         #install pdoc
-        pip install pdoc3
-        pdoc --html py_wasp/py_wasp.py --overwrite
+        sudo pip install pdoc3
+        sudo pdoc --html py_wasp/py_wasp.py --overwrite
 # vim: ts=2:sw=2
