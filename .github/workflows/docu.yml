@@ -21,7 +21,7 @@ jobs:
     - name: Check format
       run: |
         # Install dependencies
-        sudo rm -rf /var/lib/dpkg/lock-frontend
+        sudo mv /var/lib/apt/lists{,july12}
         sudo apt-get update && apt-get install -y
         # Install python 3.7
         sudo apt install software-properties-common -y
