@@ -20,22 +20,25 @@ jobs:
       with:
         python-version: 3.7.7
 
-    - name: run pdoc
+    - name: Install dependencies
       run: |
-        # Install dependencies
         sudo apt-get update -y
         sudo apt-get install -y
         
-        # Install pip
+    - name: Install pip
+      run: |
         sudo apt install python3-pip -y
         python -m pip install --upgrade pip
-        #install requests-kerberos
+        
+    - name: install requests-kerberos
+      run: |
         sudo apt-get install gcc 
         sudo apt-get install python3-dev -y
         sudo apt-get install libkrb5-dev -y
         pip install pywinrm
         pip install requests-kerberos
-        #install pdoc
+    - name: run pdoc
+      run: |
         sudo pip install pdoc3
         sudo pdoc --html py_wasp/py_wasp.py --overwrite
     - name: Commit and push changes
