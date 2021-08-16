@@ -1,0 +1,44 @@
+name: docu-py-wasp
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  TC_NBFEEDER_HOST: syssim_tc_pdx
+  __NBTARGET_FILE: /nfs/site/gen/adm/netbatch/megafeeder/nbtarget/root/syssim_tc_pdx/.nbtarget
+
+jobs:
+  docu-py-wasp:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Check format
+      run: |
+        # Install dependencies
+        apt-get update && apt-get install -y
+        # Install python 3.7
+        apt install software-properties-common -y
+        apt install python3.7 -y
+        # Make python 3.7 the default
+        echo "alias python=python3.7" >> ~/.bashrc
+        export PATH=${PATH}:/usr/bin/python3.7
+        /bin/bash -c "source ~/.bashrc"
+        # Install pip
+        apt install python3-pip -y
+        python3 -m pip install --upgrade pip
+        #install requests-kerberos
+        apt-get install gcc 
+        apt-get install python-dev -y
+        apt-get install libkrb5-dev -y
+        pip install pywinrm[kerberos]
+        pip install requests-kerberos
+        #install pdoc
+        pip install pdoc3
+        pdoc --html py_wasp/py_wasp.py --overwrite
+# vim: ts=2:sw=2
