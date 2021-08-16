@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Install xmllint
       run: sudo apt-get install libxml2-utils
-    - name: Check format
+    - name: run pdoc
       run: |
         # Install dependencies
         sudo apt-get update && apt-get install -y
