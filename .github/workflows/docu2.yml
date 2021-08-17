@@ -22,7 +22,7 @@ jobs:
         pwd
         pwd
         pwd
-        mv /home/runner/work/docu-py-wasp/docu2/docs/py_wasp.html /home/runner/work/docu-py-wasp/docu2/docs/index.html
+        sudo mv /home/runner/work/docu-py-wasp/docu2/docs/py_wasp.html /home/runner/work/docu-py-wasp/docu2/docs/index.html
 
       
     - name: Commit and push changes
