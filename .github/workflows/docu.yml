@@ -41,7 +41,8 @@ jobs:
         sudo pip install requests-kerberos
         sudo pip install pdoc3
         sudo pdoc --html py_wasp/py_wasp.py --overwrite -o docs
-        mv /docs/py_wasp.html /docs/index.html
+        pwd
+        ls
         
     - name: Commit and push changes
       run: |
