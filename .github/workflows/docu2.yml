@@ -17,7 +17,7 @@ jobs:
       
     - name: run pdoc
       run: |
-        pdoc --html py_wasp/py_wasp.py --overwrite -o docs
+        pdoc --html py_wasp/py_wasp.py --overwrite -o docs -f
         pwd
         pwd
         pwd
@@ -32,5 +32,5 @@ jobs:
 
         git add -A
         git commit -m "create py_wasp documantation"
-        git push -f origin master
+        git push
 # vim: ts=2:sw=2
