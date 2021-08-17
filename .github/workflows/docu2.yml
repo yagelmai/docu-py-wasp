@@ -27,8 +27,7 @@ jobs:
       run: |
         git config --global user.name "yagelmai"
         git config --global user.email "yagel.maimon@intel.com"
-        git branch -u origin/master
         git add -A
         git commit -m "create py_wasp documantation"
         git pull
-        git push
+        git push -u
