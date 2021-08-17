@@ -39,8 +39,8 @@ jobs:
       run: |
         sudo pip install pywinrm
         sudo pip install requests-kerberos
-        sudo pip install pdoc3
-        sudo pdoc --html py_wasp/py_wasp.py --overwrite -o docs --config generate_base_index=True --config base_index_md=index.html 
+        sudo pip install pdoc3ndex=True --config base_index_md=index.html
+        sudo pdoc --html py_wasp/py_wasp.py --overwrite -o docs index 
     - name: Commit and push changes
       run: |
         git config --global user.name "yagelmai"
