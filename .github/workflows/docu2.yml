@@ -17,7 +17,7 @@ jobs:
       
     - name: run pdoc
       run: |
-        pip install pdoc3
+        pip3 install pdoc3
         pdoc --html py_wasp/py_wasp.py --overwrite -o docs
         pwd
         pwd
