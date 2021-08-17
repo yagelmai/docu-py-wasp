@@ -10,34 +10,45 @@ on:
 
 jobs:
   docu-py-wasp:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    - name: Install pip
-      run: |
-        sudo apt install python3-pip -y
-        python -m pip install --upgrade pip
-        
-    - name: install requests-kerberos
-      run: |
-        sudo apt-get install gcc 
-        sudo apt-get install python3-dev -y
-        sudo apt-get install libkrb5-dev -y
-    - name: run pdoc
-      run: |
-        sudo pip install pywinrm
-        sudo pip install requests-kerberos
-        sudo pip install pdoc3
-        sudo pdoc --html py_wasp/py_wasp.py --overwrite -o docs
-        mv /home/runner/work/docu-py-wasp/docu-py-wasp/docs/py_wasp.html /home/runner/work/docu-py-wasp/docu-py-wasp/docs/index.html 
-        
-    - name: Commit and push changes
-      run: |
-        git config --global user.name "yagelmai"
-        git config --global user.email "yagel.maimon@intel.com"
-        git add -A
-        git commit -m "create py_wasp documantation"
-        git push
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7.7
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y
+
+      - name: Install pip
+        run: |
+          sudo apt install python3-pip -y
+          python -m pip install --upgrade pip
+
+      - name: install requests-kerberos
+        run: |
+          sudo apt-get install gcc 
+          sudo apt-get install python3-dev -y
+          sudo apt-get install libkrb5-dev -y
+      - name: run pdoc
+        run: |
+          sudo pip install pywinrm
+          sudo pip install requests-kerberos
+          sudo pip install pdoc3
+          sudo pdoc --html py_wasp/py_wasp.py --overwrite -o docs
+          mv /home/runner/work/docu-py-wasp/docu-py-wasp/docs/py_wasp.html /home/runner/work/docu-py-wasp/docu-py-wasp/docs/index.html
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "yagelmai"
+          git config --global user.email "yagel.maimon@intel.com"
+          git add -A
+          git commit -m "create py_wasp documantation"
+          git push
+
 # vim: ts=2:sw=2
