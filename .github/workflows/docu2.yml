@@ -1,4 +1,4 @@
-name: docu-py-wasp2
+name: docu2
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
     - name: run pdoc
       run: | 
         sudo pdoc --html py_wasp/py_wasp.py --overwrite -o docs
-        mv /home/runner/work/docu-py-wasp/docu-py-wasp/docs/py_wasp.html /home/runner/work/docu-py-wasp/docu-py-wasp/docs/index.html 
+        mv /home/runner/work/docu2/docu2/docs/py_wasp.html /home/runner/work/docu2/docu2/docs/index.html 
         
       
     - name: Commit and push changes
