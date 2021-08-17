@@ -18,7 +18,7 @@ jobs:
       
     - name: run pdoc
       run: |
-        pdoc --html py_wasp/py_wasp.py --overwrite
+        pdoc --html py_wasp/py_wasp.py --overwrite -o docs
         pwd
         pwd
         pwd
