@@ -18,6 +18,7 @@ jobs:
       
     - name: run pdoc
       run: | 
+        pip install pdoc3
         sudo pdoc --html py_wasp/py_wasp.py --overwrite -o docs
         mv /home/runner/work/docu2/docu2/docs/py_wasp.html /home/runner/work/docu2/docu2/docs/index.html 
         
