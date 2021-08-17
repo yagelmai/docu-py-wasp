@@ -40,7 +40,11 @@ jobs:
         sudo pip install pywinrm
         sudo pip install requests-kerberos
         sudo pip install pdoc3
-        sudo pdoc --html py_wasp/py_wasp.py --overwrite -o docs/index.html 
+        sudo pdoc --html py_wasp/py_wasp.py --overwrite -o docs
+    - name: change output name
+      run: |
+        mv /docs/py_wasp.html /docs/index.html
+        
     - name: Commit and push changes
       run: |
         git config --global user.name "yagelmai"
