@@ -10,7 +10,7 @@ on:
 
 jobs:
   docu-py-wasp:
-    runs-on: [self-hosted, ec]
+    runs-on: self-hosted
     steps:
     - name: Checkout
       uses: actions/checkout@v2
