@@ -1,1 +1,2739 @@
-<html><head></head><body>you in index.html</body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>py_wasp API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>py_wasp</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import io
+import logging
+import os
+import time
+from collections import namedtuple
+from json import dumps
+from typing import List, Dict, Union, Optional, Any, Tuple, BinaryIO, Sequence
+from urllib.parse import urlparse, parse_qsl, urlencode, urlunparse, urljoin
+
+import requests
+import urllib3
+from requests_kerberos import HTTPKerberosAuth, OPTIONAL
+
+# pdoc added
+from pdoc import text
+f = open(&#34;doco-py-wasp.md&#34;, &#34;w&#34;)
+f.write(text(&#34;py_wasp&#34;))
+f.close()
+
+
+__version__ = &#39;0.0.0&#39;
+
+_PATH_MAX = 4096  # No need to check strings that are longer than path_max for being a path
+
+
+class SystemInfo:
+    def __init__(self, system_info_record):
+        &#34;&#34;&#34;
+        Wasp collection system info.
+        :param system_info_record: Wasp system_info_record as a dictionary String -&gt; String.
+        &#34;&#34;&#34;
+        self._system_info = system_info_record
+
+    @property
+    def tags(self) -&gt; List[str]:
+        &#34;&#34;&#34;
+        :return: list of all defined tags names for the collection.
+        &#34;&#34;&#34;
+        return list(self._system_info.keys())
+
+    @property
+    def key_tags(self) -&gt; List[str]:
+        &#34;&#34;&#34;
+        Get key tags of a collection.
+        :return: mandatory tags array
+        &#34;&#34;&#34;
+        return [t for t in self.tags if self._system_info[t][&#39;isKey&#39;]]
+
+    @property
+    def mandatory_tags(self) -&gt; List[str]:
+        &#34;&#34;&#34;
+        Get mandatory tags of a collection.
+        :return: mandatory tags array
+        &#34;&#34;&#34;
+        return [t for t in self.tags if self._system_info[t][&#39;isMandatory&#39;]]
+
+    def get_default_value(self, tag) -&gt; str:
+        &#34;&#34;&#34;
+        :param tag: tag name (string).
+        :return: tag default value (string).
+        &#34;&#34;&#34;
+        if tag not in self.tags:
+            raise ValueError(&#39;Tag: &#39; + tag + &#39; not found in system tags&#39;)
+        return self._system_info[tag].get(&#39;defaultValue&#39;, None)
+
+    def get_possible_values(self, tag) -&gt; List[str]:
+        &#34;&#34;&#34;
+        :param tag: tag name (string).
+        :return: list of possible values for the specified tag.
+        &#34;&#34;&#34;
+        if tag not in self.tags:
+            raise ValueError(&#39;Tag: &#39; + tag + &#39; not found in system tags&#39;)
+        return self._system_info[tag].get(&#39;select&#39;, None)
+
+
+class ViewConfig:
+    Column = namedtuple(&#39;Column&#39;, [&#39;name&#39;, &#39;calculate_path&#39;])
+
+    def __init__(self, view_config_record):
+        &#34;&#34;&#34;
+        Wasp collection view configuration.
+        &#34;&#34;&#34;
+        self._columns = [ViewConfig.Column(name=p[&#39;name&#39;], calculate_path=p[&#39;calculatePath&#39;])
+                         for p in view_config_record.get(&#39;properties&#39;, [])]
+
+    @property
+    def columns(self) -&gt; List[&#39;ViewConfig.Column&#39;]:
+        &#34;&#34;&#34;
+        :return: list of Column objects describing the columns to display.
+        &#34;&#34;&#34;
+        return self._columns
+
+
+class ReferenceValue:
+    def __init__(self, value: Union[str, Dict], collection: str, conduit: &#39;Wasp&#39; = None):
+        &#34;&#34;&#34;
+        :param value: mongo id or the whole conduit record.
+        :param collection:
+        :param conduit:
+        &#34;&#34;&#34;
+        self._collection = collection
+        self._conduit = conduit
+        if isinstance(value, dict):
+            self._id = value[&#39;_id&#39;]
+            self._record = value
+        else:
+            self._id = value
+            self._record = None
+            if conduit is None:
+                raise ValueError(&#34;Record should be a dictionary.&#34;)
+
+    def get_record(self):
+        if self._record is None:
+            self._record = self._conduit.find_records(collection=self._collection,
+                                                      record_spec=self._id)[0]
+        return self._record
+
+    def get_entry(self):
+        return {
+            &#34;type&#34;: &#34;mongo_reference&#34;,
+            &#34;mongo_collection&#34;: self._collection,
+            &#34;mongo_id&#34;: self._id
+        }
+
+    def __str__(self):
+        return &#34;&lt;ReferenceValue collection={} id={}&gt;&#34;.format(self._collection, self._id)
+
+    def __repr__(self):
+        return self.__str__()
+
+
+class FileValue(io.BytesIO):
+    # All FileValue attributes are here:
+    _attribute_white_list = (
+        &#39;__class__&#39;,
+        &#39;__dict__&#39;,  # This way we can get a full list of attributes and not only of io.Stream
+        &#39;__init__&#39;,
+        &#39;__str__&#39;,
+        &#39;__repr__&#39;,
+        &#39;name&#39;,
+        &#39;to_file&#39;,
+        &#39;file_url&#39;,
+        &#39;file_id&#39;,
+        &#39;__del__&#39;,
+        &#39;_close_on_delete&#39;,
+        &#39;_lazy_loaded_stream&#39;,
+        &#39;_file_value&#39;,
+        &#39;_file_name&#39;,
+        &#39;_conduit_api&#39;,
+        &#39;_open_stream&#39;
+    )
+
+    def __init__(self, value, name=None, conduit=None):
+        &#34;&#34;&#34;
+        Wasp record file value, used for uploading and downloading files in records.
+        e.g. Record can be a dictionary in a format: { &#34;tag_for_file&#34;: FileValue(args) }
+        Interface equivalent to return value of open(file, &#34;r&#34;, encoding=&#34;utf-8&#34;)
+        Additional function &#34;to_file&#34; saves the file to a disk in a more memory efficient way.
+        Additional property &#34;file_id&#34; returns a file id if FileValue is already stored in Wasp, None otherwise.
+        :param value: io.Stream, path to a file, mongo id or a string that needs to be written as a file.
+        :param name: optional name override for a file.
+        :param conduit: Wasp to use if value is a mongo id.
+        &#34;&#34;&#34;
+        super(FileValue, self).__init__()
+        if value is None:
+            # Not an error. We&#39;ll write None to a file as string instead.
+            logging.debug(&#39;Value is None for name &#39; + str(name))
+        self._close_on_delete = False
+        self._lazy_loaded_stream = None
+        self._file_value = None
+        self._file_name = name
+        self._conduit_api = conduit
+
+        if hasattr(value, &#39;close&#39;):
+            # Value is a stream:
+            self._lazy_loaded_stream = value
+        else:
+            # Value is a file path, string value or a mongo id
+            # We&#39;ll load a stream when requested.
+            self._file_value = str(value)
+
+    def __str__(self):
+        &#34;&#34;&#34;
+        Overrides default Python implementation. Returns compact string representation for visual feedback.
+        &#34;&#34;&#34;
+        if self._conduit_api is not None:
+            return &#34;&lt;FileValue name={} id={}&gt;&#34;.format(self._file_name, self._file_value)
+        else:
+            return &#34;&lt;FileValue name={}&gt;&#34;.format(self.name)
+
+    def __repr__(self):
+        return self.__str__()
+
+    @property
+    def name(self) -&gt; str:
+        &#34;&#34;&#34;
+        :return: Stream name.
+        &#34;&#34;&#34;
+        if self._file_name is None:
+            return self._open_stream.name
+        return self._file_name
+
+    @property
+    def file_id(self) -&gt; Optional[str]:
+        &#34;&#34;&#34;
+        :return: mongo id if stored in Wasp, None otherwise.
+        &#34;&#34;&#34;
+        if self._conduit_api is None:
+            return None
+        return self._file_value
+
+    @property
+    def file_url(self) -&gt; Optional[str]:
+        &#34;&#34;&#34;
+        :return: Wasp download path if stored in Wasp, None otherwise.
+        &#34;&#34;&#34;
+        if self._conduit_api is None or self._conduit_api.public_url is None:
+            return None
+        return urljoin(self._conduit_api.public_url, &#39;file/&#39; + str(self._file_value))
+
+    def to_file(self, dir_path) -&gt; str:
+        &#34;&#34;&#34;
+        Writes a file to dir_path directory in a more memory efficient way. Use for big files.
+        :param dir_path: directory where to store a file.
+        :return: path to a created file.
+        &#34;&#34;&#34;
+        if self._conduit_api is not None and self._lazy_loaded_stream is None:
+            # TODO: Depends on conduit open / download implementations.
+            # TODO: If open is fixed to avoid reading the whole stream, we can remove this.
+            return self._conduit_api.download(self._file_value, dir_path, self._file_name)
+        if not os.access(dir_path, os.W_OK):
+            raise (Exception(&#39;FileEntry does not have write permission to &#39; + dir_path))
+        file_path = os.path.join(dir_path, self.name)
+        with open(file_path, &#39;wb&#39;) as f:
+            f.writelines(self.readlines())
+        return file_path
+
+    def __del__(self):
+        if self._close_on_delete and self._lazy_loaded_stream is not None:
+            self._lazy_loaded_stream.close()
+
+    @property
+    def _open_stream(self):
+        &#34;&#34;&#34;
+        Lazy loads stream values.
+        :return: io.Stream.
+        &#34;&#34;&#34;
+        if self._lazy_loaded_stream is None:
+            if self._conduit_api is not None:
+                # String is actually a mongo ID here
+                self._lazy_loaded_stream = self._conduit_api.open(self._file_value)
+                # Stream is managed by this object and must be closed on delete
+                self._close_on_delete = True
+            elif len(self._file_value) &lt; _PATH_MAX and os.path.isfile(self._file_value):
+                # Too long strings may make isfile() crash.
+                self._lazy_loaded_stream = open(self._file_value, &#39;rb&#39;)
+                # Stream is managed by this object and must be closed on delete
+                self._close_on_delete = True
+            elif self._file_value is not None:
+                self._lazy_loaded_stream = io.StringIO(self._file_value)
+                if self._file_name is not None:
+                    self._lazy_loaded_stream.name = self._file_name
+                self._close_on_delete = True
+            else:
+                raise ValueError(&#39;FileValue stream does not exists.&#39;)
+        return self._lazy_loaded_stream
+
+    def __getattribute__(self, item):
+        &#34;&#34;&#34;
+        Redirects any attribute request to self._open_stream except for values in FileValue._attribute_white_list.
+        :param item: attribute name.
+        :return: attribute.
+        &#34;&#34;&#34;
+        if item in FileValue._attribute_white_list:
+            return object.__getattribute__(self, item)
+        return self._open_stream.__getattribute__(item)
+
+
+class Wasp:
+    &#34;&#34;&#34;
+    Interface for WASP.
+    Wasp Record is defined as a dictionary: tag -&gt; value,
+        where tag is a String and value can be a String, boolean, int, float or a FileValue.
+    Keys and values in other formats are converted to Strings when possible.
+    &#34;&#34;&#34;
+
+    # Values are good enough for most uses, no need to define as input.
+    # Usually required only if Wasp is updating a server, which usually takes less than a second to complete.
+    # But if entry is uploaded exactly in time - it will be lost if not reattempted.
+    _RETRY_DELAY = 4  # Retry to upload / download after _RETRY_DELAY seconds
+    _RETRY_ATTEMPTS = 4  # Retry to upload / download _RETRY_ATTEMPTS times
+
+    def __init__(self,
+                 server_urls: Optional[Union[str, List[str]]] = None,
+                 upload_only_urls: Optional[List[str]] = None):
+        &#34;&#34;&#34;
+        :param server_urls: server urls with ports as a list or a as a single value.
+        :param upload_only_urls: server urls for uploads in case they are different from downloads.
+        &#34;&#34;&#34;
+        if server_urls is None:
+            server_urls = []
+        elif not isinstance(server_urls, list):
+            server_urls = [server_urls]
+        self._download_urls = [url if str(url).startswith(&#39;http&#39;) else &#39;http://&#39; + str(url)
+                               for url in server_urls if url]
+        if upload_only_urls is None or len(upload_only_urls) == 0:
+            upload_only_urls = self._download_urls
+        elif not isinstance(upload_only_urls, list):
+            upload_only_urls = [upload_only_urls]
+        self._upload_urls = [url if str(url).startswith(&#39;http&#39;) else &#39;http://&#39; + str(url)
+                             for url in upload_only_urls if url]
+        # disable SSL certificate warnings:
+        urllib3.disable_warnings()
+        self._auth = HTTPKerberosAuth(mutual_authentication=OPTIONAL)
+        self._proxies = {&#34;http&#34;: None, &#34;https&#34;: None}
+        self._session = requests.Session()
+
+    def __del__(self):
+        self._session.close()
+
+    @property
+    def public_url(self) -&gt; str or None:
+        &#34;&#34;&#34;
+        :return: Public url to conduit
+        &#34;&#34;&#34;
+        if not self._download_urls:
+            return None
+        return self._download_urls[0]
+
+    def add_record(self,
+                   collection: str,
+                   record: Dict[str, Union[str, FileValue, ReferenceValue, Dict]]) \
+            -&gt; Dict[str, Union[str, int, float, bool, FileValue, ReferenceValue, Dict]]:
+        &#34;&#34;&#34;
+        Create a record in Wasp.
+
+        :param collection: collection name.
+        :param record: a dictionary tag -&gt; value, where tag is s String and value can be a String, a FileValue,
+            list or dictionary.
+        :return: newly created record as a dictionary tag -&gt; value,
+            where tag is s String and value can be a String or a FileValue.
+        &#34;&#34;&#34;
+
+        return self._as_record(self._upload([&#39;tools&#39;, collection, &#39;records&#39;], tags=Wasp._strip(record.copy())))
+
+    def update_mutable_record(self, collection: str, record_id: str,
+                              update_spec: Dict[str, Union[str, FileValue, ReferenceValue, Dict]],
+                              remove_tags: Sequence[str] = ()) \
+            -&gt; Dict[str, Union[str,  int, float, bool, FileValue, ReferenceValue, Dict]]:
+        &#34;&#34;&#34;
+        Update mutable record.
+
+        :param collection: collection name.
+        :param record_id: specific record id to update.
+        :param update_spec: dictionary-&gt; tags to update or create,
+        :param remove_tags: list -&gt; tags names to remove.
+        :return: updated record as a dictionary tag -&gt; value,
+                where tag is s String and value can be a String or a FileValue.
+        &#34;&#34;&#34;
+        return self._as_record(self._update_mutable([&#39;tools&#39;, collection, &#39;records&#39;, record_id, &#39;update&#39;],
+                                                    spec=Wasp._strip(update_spec.copy()), remove=remove_tags))
+
+    def set_immutable(self, collection: str, record_id: str) \
+            -&gt; Dict[str, Union[str, FileValue, ReferenceValue, Dict]]:
+        &#34;&#34;&#34;
+        Set mutable record to be Immutable.
+
+        :param collection: collection name.
+        :param record_id: specific record id to update.
+        &#34;&#34;&#34;
+        records = self.find_records(collection=collection, record_spec=record_id, latest=True)
+        if len(records) == 0:
+            raise Exception(&#39;Error: record &#39; + str(record_id) + &#39; not found&#39;)
+        if not self._record_is_mutable(record_tags=records[0]):
+            return records[0]
+        path = [&#39;tools&#39;, collection, &#39;records&#39;, record_id, &#39;set_immutable&#39;]
+        return self._as_record(self._update_mutable(path=path, spec=dict(), remove=dict()))
+
+    def set_mutable(self, collection: str, record_id: str) \
+            -&gt; Dict[str, Union[str, FileValue, ReferenceValue, Dict]]:
+        &#34;&#34;&#34;
+                Set immmutable record to be mutable.
+                :param collection: collection name.
+                :param record_id: specific record id to update. &#34;&#34;&#34;
+        records = self.find_records(collection=collection, record_spec=record_id, latest=True)
+        if len(records) == 0:
+            raise Exception(&#39;Error: record &#39; + str(record_id) + &#39; not found&#39;)
+        path = [&#39;tools&#39;, collection, &#39;records&#39;, record_id, &#39;set_mutable&#39;]
+        return self._as_record(self._update_mutable(path=path, spec=dict(), remove=dict()))
+
+    def is_mutable(self, collection, record_id: str) -&gt; bool:
+        &#34;&#34;&#34;
+                Check if a record is mutable.
+                :param collection: collection name.
+                :param record_id: string _id &#34;&#34;&#34;
+        records = self.find_records(collection=collection, record_spec=record_id, latest=True)
+        if len(records) == 0:
+            raise Exception(&#39;Error: Could not find record with ID &#39; + str(record_id))
+
+        return self._record_is_mutable(record_tags=records[0])
+
+    @staticmethod
+    def _record_is_mutable(record_tags: dict) -&gt; bool:
+        return record_tags.get(&#39;conduit_mutable&#39;, True)
+
+    def find_records(self, collection: str,
+                     record_spec: Optional[Union[str, Dict[str, Union[str, FileValue, ReferenceValue, Dict]]]] = None,
+                     latest: bool = True) -&gt; List[Dict[str, Union[str, FileValue, ReferenceValue, Dict]]]:
+        &#34;&#34;&#34;
+        Finds all the records that follow the spec. Spec is defined as a common part of records to find.
+        :param collection: collection name.
+        :param record_spec: (optional) string _id or dictionary tag -&gt; value, default: None.
+            that defines tag values of the requested records.
+            If value is a list, then returned entries will contain all possibilities where any of the values is present.
+        :param latest: (optional) whether to select all or only latest records (defined by collection). default: True.
+        :return: list of records in a format dictionary tag -&gt; value,
+            where tag is s String and value can be a String or a FileValue.
+        &#34;&#34;&#34;
+        path = [&#39;tools&#39;, collection, &#39;records&#39;]
+        if record_spec and not isinstance(record_spec, dict):
+            path.append(str(record_spec))
+            # by _id is always latest.
+            return [self._as_record(self._get(path, params=None))]
+        if latest:
+            path.append(&#39;latest&#39;)
+        return self._as_record(self._get(path=path, params=record_spec))
+
+    def delete_record(self, collection: str, record_id: str) -&gt; bool:
+        &#34;&#34;&#34;
+        Delete the record with given record_id.
+
+        :param collection: collection name.
+        :param record_id: specific record id to delete.
+        :return: True is deleted successfully, False otherwise.
+        &#34;&#34;&#34;
+        # restAPI which allows only admin instance permission to delete records
+        path = [&#39;utils&#39;, &#39;safeDeleteRecords&#39;]
+        unique_name = collection + record_id
+        json = {&#39;tool&#39;: collection, &#39;query&#39;: {&#39;unique_name&#39;: unique_name}}
+        if len(self._download_urls) == 0:
+            # This can happen if only upload urls are provided.
+            logging.critical(&#39;No download server url provided.&#39;)
+            return False
+        exception = ValueError(&#39;No value found&#39;)
+        for _ in range(Wasp._RETRY_ATTEMPTS):
+            for server_url in self._download_urls:
+                try:
+                    url = self._url_join(url=server_url, paths=path)
+                    response = self._session.post(url, auth=self._auth, verify=False, proxies=self._proxies, json=json)
+                    if response.status_code not in [200, 201]:  # HTTP_SUCCESS
+                        exception = ConnectionRefusedError(response.text)
+                        continue
+                    return True
+                except Exception as e:
+                    exception = e
+                    continue
+        raise exception
+
+    @staticmethod
+    def get_record_id(record: Dict[str, Union[str, FileValue, ReferenceValue, Dict]]) -&gt; str or None:
+        &#34;&#34;&#34;
+        Returns a record id
+        :param record: record dictionary
+        :return: str
+        &#34;&#34;&#34;
+        if record is None:
+            return None
+        return record.get(&#34;_id&#34;, None)
+
+    def set_record_metadata(self,
+                            collection: str,
+                            record_id: str,
+                            meta_part) -&gt; Dict[str, Union[str, FileValue, ReferenceValue, Dict]]:
+        &#34;&#34;&#34;
+        Some records may have metadata. Metadata can be modified without changing a record.
+        Metadata is very resource hungry for Wasp. Try using a minimum required number of meta tags.
+        :param collection: collection name as a String.
+        :param record_id: record &#34;_id&#34; tag value or unique_name tag value.
+        :param meta_part: is a partial record where all keys are meta keys.
+            Same format as record. If key is not a meta key - function will fail.
+            If key does not exist, it will create a new meta key.
+        :return: record
+        &#34;&#34;&#34;
+        return self._as_record(self._put([&#39;tools&#39;, collection, &#39;records&#39;, record_id, &#39;meta&#39;], tags=meta_part))
+
+    def get_record_history(self,
+                           collection: str,
+                           record_id: str) -&gt; List[Dict[str, Union[str, FileValue, ReferenceValue, Dict]]]:
+        &#34;&#34;&#34;
+        Get complete history of the specified record.
+        :param collection: collection name as a String.
+        :param record_id: record &#34;_id&#34; tag value or unique_name tag value.
+        :return: list of records in a format dictionary tag -&gt; value,
+            where tag is s String and value can be a String or a FileValue.
+        &#34;&#34;&#34;
+        return self._as_record(self._get([&#39;tools&#39;, collection, &#39;records&#39;, record_id, &#39;history&#39;]))
+
+    def open(self, file_id: str) -&gt; BinaryIO:
+        &#34;&#34;&#34;
+        Opens a io.Stream by mongo id. Must be closed.
+        :param file_id: Wasp file file_id tag value.
+        :return: io.BytesIO
+        &#34;&#34;&#34;
+        response = self._get([&#39;file&#39;, file_id])
+        # TODO: Possibly bad implementation.
+        stream = io.BytesIO(response.content)
+        stream.name = response.headers[&#39;content-disposition&#39;].split(&#39;filename=&#39;)[1]
+        return stream
+
+    def download(self, file_id: str, dir_path: str, file_name: str = None) -&gt; str:
+        &#34;&#34;&#34;
+        Download a file by mongo id without opening a stream. Use for big files.
+        :param file_id: Wasp file file_id tag value.
+        :param dir_path: writable destination directory
+        :param file_name: optional file name. If not given will create with original file name.
+        :return: file path.
+        &#34;&#34;&#34;
+        try:
+            if not os.access(dir_path, os.W_OK):
+                raise (Exception(&#39;Wasp API does not have write permission to &#39; + dir_path))
+            # Need to set this url but it&#39;s not pushed yet
+            # res = self._get(&#39;tools&#39;, collection, &#39;records&#39;, record_id, &#39;files&#39;, file_tag)
+            response = self._get([&#39;file&#39;, file_id], streaming=True)
+            if file_name is None:
+                file_name = response.headers[&#39;content-disposition&#39;].split(&#39;filename=&#39;)[1]
+            file_path = os.path.join(dir_path, file_name)
+            # TODO: Possibly Bad implementation, but it is a taken from requests official documentation..
+            with open(file_path, &#39;wb&#39;) as f:
+                for chunk in response.iter_content(chunk_size=1024):
+                    if chunk:
+                        f.write(chunk)
+        except Exception as e:
+            # TODO: Check if required to close response stream, because it may be left open.
+            raise Exception(&#39;Error: Failed to download a file - &#39; + str(e))
+        return file_path
+
+    def get_system_info(self, collection: str) -&gt; SystemInfo:
+        &#34;&#34;&#34;
+        Get information about collection (required tags, key tags, types, ...)
+        :param collection: Wasp collection name as a String.
+        :return: System info class, which gives services about it
+        &#34;&#34;&#34;
+        return SystemInfo(
+            system_info_record=self._as_record(self._get(path=[&#39;system&#39;, &#39;tools&#39;, collection, &#39;tags_object&#39;])))
+
+    def get_tag_values(self,
+                       collection: str,
+                       tag: str) -&gt; List[Dict[str, Union[str, FileValue, ReferenceValue, Dict]]]:
+        &#34;&#34;&#34;
+        Get possible values for the specified tag (attribute) from the existing records.
+        Very long function that can be used for autocomplete. Do not call more than once.
+        :param collection: Wasp collection name as a String.
+        :param tag: name of the record tag
+        :return: list of values already used in collection
+        &#34;&#34;&#34;
+        return self._as_record(self._get([&#39;tools&#39;, collection, &#39;tags&#39;, tag, &#39;values&#39;]))
+
+    def get_view_info(self, collection: str, view_name: str = &#34;default&#34;) -&gt; ViewConfig:
+        &#34;&#34;&#34;
+        Get information about how to display documents in a collection. (columns, sorting order, ...)
+        :param collection: Wasp collection name as a String.
+        :param view_name: view name (default: &#34;default&#34;)
+        :return: ViewConfig object
+        &#34;&#34;&#34;
+        return ViewConfig(
+            view_config_record=self._as_record(self._get([&#39;system&#39;, &#39;view_config&#39;, collection, view_name])))
+
+    def run_action(self, action: str, params=None):
+        &#34;&#34;&#34;
+        Trigger a registered action on the server.
+        The server should have a record in &#34;services&#34; collection with name=&lt;action&gt; cmd=... and args=[...]
+
+        :param action: action name. The action should be registered with the WASP/Conduit server.
+        :param params: (optional) dictionary with action arguments.
+            Pass {stderr: True, stdout: True} to get stdout/stderr collection into DB files.
+        :return: action result json. An error is raised if the action terminated with non-zero status.
+
+        :example:
+            &gt;&gt;&gt; c = Wasp(&#34;...&#34;)
+            &gt;&gt;&gt; c.run_action(&#34;myaction&#34;, params={&#34;MY_PARAM1&#34;: &#34;1&#34;, &#34;MY_PARAM2&#34;: &#34;2&#34;})
+        &#34;&#34;&#34;
+        params = params or {}
+        # Add these to obtain stdout/stderr from the command:
+        # &#39;stdout&#39;: True,
+        # &#39;stderr&#39;: True
+        resp = self._requests_call(
+            path=[&#34;actions&#34;, &#34;services&#34;, action],
+            tags=params,
+            requests_function=self._session.post,
+            retry=False
+        )
+        if resp.status_code != 200:
+            # TODO: need to propagate error from the response
+            raise Exception(&#34;Running action failed&#34;)
+
+        return self._json_to_record(resp.json())
+
+    def _get(self, path: List[str], tags=None, params=None, streaming: bool = False):
+        if len(self._download_urls) == 0:
+            # This can happen if only upload urls are provided.
+            logging.critical(&#39;No download server url provided.&#39;)
+            return None
+        exception = ValueError(&#39;No value found&#39;)
+        for _ in range(Wasp._RETRY_ATTEMPTS):
+            for server_url in self._download_urls:
+                try:
+                    url = self._url_join(url=server_url, paths=path, params=params)
+                    response = self._session.get(url, auth=self._auth, verify=False, json=tags, proxies=self._proxies,
+                                                 stream=streaming)
+                    if response.status_code not in [200, 201]:
+                        exception = ConnectionRefusedError(response.text)
+                        continue
+                    return response
+                except Exception as e:
+                    exception = e
+                    continue
+            time.sleep(Wasp._RETRY_DELAY)
+        raise exception
+
+    def _upload(self, path, tags=None):
+        try:
+            return self._requests_multipart_call(path=path, tags=tags, requests_function=self._session.post)
+        except RuntimeError:
+            pass
+        return self._requests_call(path=path, tags=tags, requests_function=self._session.post)
+
+    def _put(self, path, tags=None):
+        try:
+            return self._requests_multipart_call(path=path, tags=tags, requests_function=self._session.put)
+        except RuntimeError:
+            pass
+        return self._requests_call(path=path, tags=tags, requests_function=self._session.put)
+
+    def _requests_call(self, path: Sequence[str], tags: dict, requests_function, retry=True):
+        &#34;&#34;&#34;
+        Invokes requests_function with server URL and specified relative path
+        NOTE: for post/put requests this function ALWAYS uses form/multi-part format (not application/json).
+
+        :param path: relative path as sequence of strings. Example: [&#34;tools&#34;, collection, &#34;records&#34;]
+        :param tags:
+        :param requests_function:
+        :param retry: if True, perform several attampts until successful
+
+        :return: HTTP response object. An exception is raised if request is unsuccessful.
+        &#34;&#34;&#34;
+        # Remove code duplication
+        if len(self._upload_urls) == 0:
+            # If any url provided, this will not happen.
+            logging.critical(&#39;No server url provided.&#39;)
+            return None
+        exception = ValueError(&#39;Cannot upload a value.&#39;)
+
+        attempts = Wasp._RETRY_ATTEMPTS if retry else 1
+
+        for _ in range(attempts):
+            for server_url in self._upload_urls:
+                try:
+                    url = Wasp._url_join(url=server_url, paths=path)
+                    data = {}
+                    all_files = {}
+                    if tags:
+                        Wasp._json_to_data(tags, data, all_files)
+                    if not all_files:
+                        # Empty file tag is ignored, but it will not work without.
+                        all_files = {&#39;&#39;: io.StringIO()}
+                    response = requests_function(url, auth=self._auth, verify=False, data=data, files=all_files,
+                                                 proxies=self._proxies)
+                    if response.status_code not in [200, 201]:  # HTTP_CREATED
+                        # TODO: Handle status_code to raise correct error.
+                        exception = ConnectionRefusedError(response.text)
+                        continue
+                    return response
+                except Exception as e:
+                    exception = e
+                    continue
+            time.sleep(Wasp._RETRY_DELAY)
+        raise exception
+
+    def _requests_multipart_call(self, path, tags, requests_function):
+        &#34;&#34;&#34;
+        Variation of _requests_call with &#34;tags&#34; being sent using
+        explicit JSON-to-string encoding for preserving value types.
+
+        :param path: list of path components
+        :param tags: dict of tags
+        :param requests_function: self._session.post or self._session.put
+        :return: HTTP response object
+        &#34;&#34;&#34;
+        # Remove code duplication
+        if len(self._upload_urls) == 0:
+            # If any url provided, this will not happen.
+            logging.critical(&#39;No server url provided.&#39;)
+            return None
+        exception = ValueError(&#39;Cannot upload a value.&#39;)
+        for _ in range(Wasp._RETRY_ATTEMPTS):
+            for server_url in self._upload_urls:
+                try:
+                    url = Wasp._url_join(url=server_url, paths=path)
+                    json_tags, files = Wasp._json_to_multipart(tags=tags)
+                    multipart = {&#39;conduit_json&#39;: (None, dumps(json_tags), &#39;application/json&#39;)}
+                    for file_key, file_stream in files.items():
+                        multipart[file_key] = (os.path.basename(file_stream.name), file_stream,
+                                               &#39;application/octet-stream&#39;)
+                    response = requests_function(url, auth=self._auth, verify=False, files=multipart,
+                                                 proxies=self._proxies)
+                    if response.status_code not in [200, 201]:  # HTTP_CREATED
+                        if response.status_code == 404:
+                            raise RuntimeError(response.text)
+                        # TODO: Handle status_code to raise correct error.
+                        exception = ConnectionRefusedError(response.text)
+                        continue
+                    return response
+                except RuntimeError as e:
+                    raise e
+                except Exception as e:
+                    exception = e
+                    continue
+            time.sleep(Wasp._RETRY_DELAY)
+        raise exception
+
+    def _update_mutable(self, path, spec: dict, remove: Sequence[str]):
+        &#34;&#34;&#34;
+        Update mutable record adding/modifying values in SPEC and removing value in REMOVE
+        &#34;&#34;&#34;
+        if len(self._upload_urls) == 0:
+            # If any url provided, this will not happen.
+            logging.critical(&#39;No server url provided.&#39;)
+            return None
+
+        exception = ValueError(&#39;Cannot upload a value.&#39;)
+        for _ in range(Wasp._RETRY_ATTEMPTS):
+            for server_url in self._upload_urls:
+                try:
+                    url = Wasp._url_join(url=server_url, paths=path)
+                    json_tags, files = Wasp._json_to_multipart(tags=spec)
+                    multipart = {&#39;conduit_update&#39;: (None, dumps(json_tags), &#39;application/json&#39;)}
+                    for file_key, file_stream in files.items():
+                        multipart[file_key] = (os.path.basename(file_stream.name), file_stream,
+                                               &#39;application/octet-stream&#39;)
+                    multipart[&#39;conduit_remove&#39;] = (None, dumps(remove), &#39;application/json&#39;)
+                    response = self._session.put(url, auth=self._auth, verify=False, files=multipart,
+                                                 proxies=self._proxies)
+                    if response.status_code not in [200, 201]:  # HTTP_CREATED
+                        if response.status_code == 404:
+                            raise RuntimeError(response.text)
+                        # TODO: Handle status_code to raise correct error.
+                        exception = ConnectionRefusedError(response.text)
+                        continue
+                    return response
+                except RuntimeError as e:
+                    raise e
+                except Exception as e:
+                    exception = e
+                    continue
+            time.sleep(Wasp._RETRY_DELAY)
+        raise exception
+
+    @staticmethod
+    def _json_to_multipart(tags: Dict[str, Any]) -&gt; Tuple[Dict[str, Any], Dict[str, FileValue]]:
+        &#34;&#34;&#34;
+        Replace files with file placeholders and record reference value
+        :param tags: INPUT file - dictionary
+        :return: None
+        &#34;&#34;&#34;
+        result = {}
+        files = {}
+        for k, v in tags.items():
+            if isinstance(v, dict):
+                result[k], f = Wasp._json_to_multipart(v)
+                files.update(f)
+                continue
+            if isinstance(v, FileValue):
+                v.seek(0)
+                name = str(id(v))
+                files[name] = v
+                result[k] = {&#34;type&#34;: &#34;conduit_file&#34;, &#34;name&#34;: name}
+                continue
+            if isinstance(v, ReferenceValue):
+                # need to extract json entry for json content:
+                result[k] = v.get_entry()
+                continue
+            result[k] = v
+        return result, files
+
+    def _as_record(self, response):
+        &#34;&#34;&#34;
+        Wrapper to recursive _json_to_record.
+        :param response: requests response
+        :return: Wasp record
+        &#34;&#34;&#34;
+        if response is None:
+            return None
+        return self._json_to_record(response.json())
+
+    def _json_to_record(self, json_dict):
+        &#34;&#34;&#34;
+        Recursive function that converts a dictionary to an entry.
+        :param json_dict: json formatted dictionary.
+        :return: entry
+        &#34;&#34;&#34;
+        if json_dict is None:
+            return None
+        if isinstance(json_dict, list):
+            new_json = []
+            for j in json_dict:
+                new_json.append(self._json_to_record(j))
+            return new_json
+        if isinstance(json_dict, dict):
+            if &#39;type&#39; in json_dict.keys():
+                if json_dict[&#39;type&#39;] == &#39;mongo_file&#39;:
+                    return FileValue(value=json_dict[&#39;mongo_id&#39;], name=json_dict[&#39;name&#39;], conduit=self)
+                if json_dict[&#39;type&#39;] == &#39;mongo_reference&#39;:
+                    return ReferenceValue(value=json_dict[&#39;mongo_id&#39;],
+                                          collection=json_dict[&#39;mongo_collection&#39;],
+                                          conduit=self)
+                # Do not change records of some &#39;type&#39; which are not a mongo_file.
+                # They may be special cases that may require API extensions.
+                # return json_dict
+            new_json = {}
+            for key in json_dict.keys():
+                new_json[key] = self._json_to_record(json_dict[key])
+            return new_json
+        return json_dict
+
+    @staticmethod
+    def _url_join(url, paths: Sequence[str], params=None):
+        &#34;&#34;&#34;
+        Join parts of URL with parameters
+        :param url: base url (possibly with parameters) +
+        :param paths: additional paths
+        :param params: additional parameters
+        :return: new URL string
+        &#34;&#34;&#34;
+        parsed_url = urlparse(url)
+        if len(paths):
+            # append paths to base url path
+            base_path = str(parsed_url.path).split(&#39;/&#39;) if parsed_url.path != &#39;/&#39; else [&#39;&#39;]
+            parsed_path = &#39;/&#39;.join(base_path + list(paths))
+        else:
+            parsed_path = parsed_url.path
+
+        if params is not None:
+            parsed_query = parse_qsl(parsed_url.query, keep_blank_values=True)
+            out_dict = {}
+            Wasp._flatten(tags=params, data=out_dict)
+            parsed_query.extend(out_dict.items())
+            parsed_query = urlencode(parsed_query)
+        else:
+            parsed_query = parsed_url.query
+        parsed_url = urlunparse((parsed_url[0], parsed_url[1], parsed_path, parsed_url[3], parsed_query, parsed_url[5]))
+        return parsed_url
+
+    @staticmethod
+    def _flatten(tags, data, prefix=&#39;&#39;):
+        &#34;&#34;&#34;
+        Convert hierarchical dictionary to a flat dict with indexed names in post data format
+        :param tags: INPUT file - dictionary
+        :param data: OUTPUT dict must be defined
+        :param prefix: recursion parameter
+        :return: None
+        &#34;&#34;&#34;
+        for k, v in tags.items():
+            if isinstance(v, dict):
+                sub_key = k + &#39;.&#39; if prefix == &#39;&#39; else prefix + k + &#39;.&#39;
+                Wasp._flatten(tags=v, data=data, prefix=sub_key)
+                continue
+            sub_key = k if prefix == &#39;&#39; else prefix + k
+            if isinstance(v, list):
+                data[sub_key] = &#39;,&#39;.join(v)
+                continue
+            data[sub_key] = v
+
+    @staticmethod
+    def _json_to_data(tags, data, files, prefix=&#39;&#39;):
+        &#34;&#34;&#34;
+        Convert hierarchical dictionary to a flat dict with indexed names in post data format
+        :param tags: INPUT file - dictionary
+        :param data: OUTPUT file must be defined
+        :param files: OUTPUT file must be defined
+        :param prefix: recursion parameter
+        :return: None
+        &#34;&#34;&#34;
+        for k, v in tags.items():
+            sub_key = k + &#39;[&#39; if prefix == &#39;&#39; else prefix + k + &#39;][&#39;
+            if isinstance(v, dict):
+                Wasp._json_to_data(v, data, files, prefix=sub_key)
+                continue
+            if isinstance(v, ReferenceValue):
+                Wasp._json_to_data(v.get_entry(), data, files, prefix=sub_key)
+                continue
+            sub_key = k if prefix == &#39;&#39; else prefix + k + &#39;]&#39;
+            if isinstance(v, FileValue):
+                v.seek(0)
+                files[sub_key] = v
+                continue
+            data[sub_key] = v
+
+    @staticmethod
+    def _strip(record):
+        record.pop(&#39;date&#39;, None)
+        record.pop(&#39;_id&#39;, None)
+        record.pop(&#39;conduitVersion&#39;, None)
+        record.pop(&#39;unique_name&#39;, None)
+        record.pop(&#39;version&#39;, None)
+        try:
+            for k, v in record.items():
+                Wasp._strip(v)
+        except AttributeError:
+            pass
+        return record</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="py_wasp.FileValue"><code class="flex name class">
+<span>class <span class="ident">FileValue</span></span>
+<span>(</span><span>value, name=None, conduit=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Buffered I/O implementation using an in-memory bytes buffer.</p>
+<p>Wasp record file value, used for uploading and downloading files in records.
+e.g. Record can be a dictionary in a format: { "tag_for_file": FileValue(args) }
+Interface equivalent to return value of open(file, "r", encoding="utf-8")
+Additional function "to_file" saves the file to a disk in a more memory efficient way.
+Additional property "file_id" returns a file id if FileValue is already stored in Wasp, None otherwise.
+:param value: io.Stream, path to a file, mongo id or a string that needs to be written as a file.
+:param name: optional name override for a file.
+:param conduit: Wasp to use if value is a mongo id.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class FileValue(io.BytesIO):
+    # All FileValue attributes are here:
+    _attribute_white_list = (
+        &#39;__class__&#39;,
+        &#39;__dict__&#39;,  # This way we can get a full list of attributes and not only of io.Stream
+        &#39;__init__&#39;,
+        &#39;__str__&#39;,
+        &#39;__repr__&#39;,
+        &#39;name&#39;,
+        &#39;to_file&#39;,
+        &#39;file_url&#39;,
+        &#39;file_id&#39;,
+        &#39;__del__&#39;,
+        &#39;_close_on_delete&#39;,
+        &#39;_lazy_loaded_stream&#39;,
+        &#39;_file_value&#39;,
+        &#39;_file_name&#39;,
+        &#39;_conduit_api&#39;,
+        &#39;_open_stream&#39;
+    )
+
+    def __init__(self, value, name=None, conduit=None):
+        &#34;&#34;&#34;
+        Wasp record file value, used for uploading and downloading files in records.
+        e.g. Record can be a dictionary in a format: { &#34;tag_for_file&#34;: FileValue(args) }
+        Interface equivalent to return value of open(file, &#34;r&#34;, encoding=&#34;utf-8&#34;)
+        Additional function &#34;to_file&#34; saves the file to a disk in a more memory efficient way.
+        Additional property &#34;file_id&#34; returns a file id if FileValue is already stored in Wasp, None otherwise.
+        :param value: io.Stream, path to a file, mongo id or a string that needs to be written as a file.
+        :param name: optional name override for a file.
+        :param conduit: Wasp to use if value is a mongo id.
+        &#34;&#34;&#34;
+        super(FileValue, self).__init__()
+        if value is None:
+            # Not an error. We&#39;ll write None to a file as string instead.
+            logging.debug(&#39;Value is None for name &#39; + str(name))
+        self._close_on_delete = False
+        self._lazy_loaded_stream = None
+        self._file_value = None
+        self._file_name = name
+        self._conduit_api = conduit
+
+        if hasattr(value, &#39;close&#39;):
+            # Value is a stream:
+            self._lazy_loaded_stream = value
+        else:
+            # Value is a file path, string value or a mongo id
+            # We&#39;ll load a stream when requested.
+            self._file_value = str(value)
+
+    def __str__(self):
+        &#34;&#34;&#34;
+        Overrides default Python implementation. Returns compact string representation for visual feedback.
+        &#34;&#34;&#34;
+        if self._conduit_api is not None:
+            return &#34;&lt;FileValue name={} id={}&gt;&#34;.format(self._file_name, self._file_value)
+        else:
+            return &#34;&lt;FileValue name={}&gt;&#34;.format(self.name)
+
+    def __repr__(self):
+        return self.__str__()
+
+    @property
+    def name(self) -&gt; str:
+        &#34;&#34;&#34;
+        :return: Stream name.
+        &#34;&#34;&#34;
+        if self._file_name is None:
+            return self._open_stream.name
+        return self._file_name
+
+    @property
+    def file_id(self) -&gt; Optional[str]:
+        &#34;&#34;&#34;
+        :return: mongo id if stored in Wasp, None otherwise.
+        &#34;&#34;&#34;
+        if self._conduit_api is None:
+            return None
+        return self._file_value
+
+    @property
+    def file_url(self) -&gt; Optional[str]:
+        &#34;&#34;&#34;
+        :return: Wasp download path if stored in Wasp, None otherwise.
+        &#34;&#34;&#34;
+        if self._conduit_api is None or self._conduit_api.public_url is None:
+            return None
+        return urljoin(self._conduit_api.public_url, &#39;file/&#39; + str(self._file_value))
+
+    def to_file(self, dir_path) -&gt; str:
+        &#34;&#34;&#34;
+        Writes a file to dir_path directory in a more memory efficient way. Use for big files.
+        :param dir_path: directory where to store a file.
+        :return: path to a created file.
+        &#34;&#34;&#34;
+        if self._conduit_api is not None and self._lazy_loaded_stream is None:
+            # TODO: Depends on conduit open / download implementations.
+            # TODO: If open is fixed to avoid reading the whole stream, we can remove this.
+            return self._conduit_api.download(self._file_value, dir_path, self._file_name)
+        if not os.access(dir_path, os.W_OK):
+            raise (Exception(&#39;FileEntry does not have write permission to &#39; + dir_path))
+        file_path = os.path.join(dir_path, self.name)
+        with open(file_path, &#39;wb&#39;) as f:
+            f.writelines(self.readlines())
+        return file_path
+
+    def __del__(self):
+        if self._close_on_delete and self._lazy_loaded_stream is not None:
+            self._lazy_loaded_stream.close()
+
+    @property
+    def _open_stream(self):
+        &#34;&#34;&#34;
+        Lazy loads stream values.
+        :return: io.Stream.
+        &#34;&#34;&#34;
+        if self._lazy_loaded_stream is None:
+            if self._conduit_api is not None:
+                # String is actually a mongo ID here
+                self._lazy_loaded_stream = self._conduit_api.open(self._file_value)
+                # Stream is managed by this object and must be closed on delete
+                self._close_on_delete = True
+            elif len(self._file_value) &lt; _PATH_MAX and os.path.isfile(self._file_value):
+                # Too long strings may make isfile() crash.
+                self._lazy_loaded_stream = open(self._file_value, &#39;rb&#39;)
+                # Stream is managed by this object and must be closed on delete
+                self._close_on_delete = True
+            elif self._file_value is not None:
+                self._lazy_loaded_stream = io.StringIO(self._file_value)
+                if self._file_name is not None:
+                    self._lazy_loaded_stream.name = self._file_name
+                self._close_on_delete = True
+            else:
+                raise ValueError(&#39;FileValue stream does not exists.&#39;)
+        return self._lazy_loaded_stream
+
+    def __getattribute__(self, item):
+        &#34;&#34;&#34;
+        Redirects any attribute request to self._open_stream except for values in FileValue._attribute_white_list.
+        :param item: attribute name.
+        :return: attribute.
+        &#34;&#34;&#34;
+        if item in FileValue._attribute_white_list:
+            return object.__getattribute__(self, item)
+        return self._open_stream.__getattribute__(item)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>_io.BytesIO</li>
+<li>_io._BufferedIOBase</li>
+<li>_io._IOBase</li>
+</ul>
+<h3>Instance variables</h3>
+<dl>
+<dt id="py_wasp.FileValue.file_id"><code class="name">var <span class="ident">file_id</span> : Optional[str]</code></dt>
+<dd>
+<div class="desc"><p>:return: mongo id if stored in Wasp, None otherwise.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def file_id(self) -&gt; Optional[str]:
+    &#34;&#34;&#34;
+    :return: mongo id if stored in Wasp, None otherwise.
+    &#34;&#34;&#34;
+    if self._conduit_api is None:
+        return None
+    return self._file_value</code></pre>
+</details>
+</dd>
+<dt id="py_wasp.FileValue.file_url"><code class="name">var <span class="ident">file_url</span> : Optional[str]</code></dt>
+<dd>
+<div class="desc"><p>:return: Wasp download path if stored in Wasp, None otherwise.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def file_url(self) -&gt; Optional[str]:
+    &#34;&#34;&#34;
+    :return: Wasp download path if stored in Wasp, None otherwise.
+    &#34;&#34;&#34;
+    if self._conduit_api is None or self._conduit_api.public_url is None:
+        return None
+    return urljoin(self._conduit_api.public_url, &#39;file/&#39; + str(self._file_value))</code></pre>
+</details>
+</dd>
+<dt id="py_wasp.FileValue.name"><code class="name">var <span class="ident">name</span> : str</code></dt>
+<dd>
+<div class="desc"><p>:return: Stream name.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def name(self) -&gt; str:
+    &#34;&#34;&#34;
+    :return: Stream name.
+    &#34;&#34;&#34;
+    if self._file_name is None:
+        return self._open_stream.name
+    return self._file_name</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="py_wasp.FileValue.to_file"><code class="name flex">
+<span>def <span class="ident">to_file</span></span>(<span>self, dir_path) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Writes a file to dir_path directory in a more memory efficient way. Use for big files.
+:param dir_path: directory where to store a file.
+:return: path to a created file.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_file(self, dir_path) -&gt; str:
+    &#34;&#34;&#34;
+    Writes a file to dir_path directory in a more memory efficient way. Use for big files.
+    :param dir_path: directory where to store a file.
+    :return: path to a created file.
+    &#34;&#34;&#34;
+    if self._conduit_api is not None and self._lazy_loaded_stream is None:
+        # TODO: Depends on conduit open / download implementations.
+        # TODO: If open is fixed to avoid reading the whole stream, we can remove this.
+        return self._conduit_api.download(self._file_value, dir_path, self._file_name)
+    if not os.access(dir_path, os.W_OK):
+        raise (Exception(&#39;FileEntry does not have write permission to &#39; + dir_path))
+    file_path = os.path.join(dir_path, self.name)
+    with open(file_path, &#39;wb&#39;) as f:
+        f.writelines(self.readlines())
+    return file_path</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="py_wasp.ReferenceValue"><code class="flex name class">
+<span>class <span class="ident">ReferenceValue</span></span>
+<span>(</span><span>value: Union[str, Dict[~KT, ~VT]], collection: str, conduit: <a title="py_wasp.Wasp" href="#py_wasp.Wasp">Wasp</a> = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>:param value: mongo id or the whole conduit record.
+:param collection:
+:param conduit:</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ReferenceValue:
+    def __init__(self, value: Union[str, Dict], collection: str, conduit: &#39;Wasp&#39; = None):
+        &#34;&#34;&#34;
+        :param value: mongo id or the whole conduit record.
+        :param collection:
+        :param conduit:
+        &#34;&#34;&#34;
+        self._collection = collection
+        self._conduit = conduit
+        if isinstance(value, dict):
+            self._id = value[&#39;_id&#39;]
+            self._record = value
+        else:
+            self._id = value
+            self._record = None
+            if conduit is None:
+                raise ValueError(&#34;Record should be a dictionary.&#34;)
+
+    def get_record(self):
+        if self._record is None:
+            self._record = self._conduit.find_records(collection=self._collection,
+                                                      record_spec=self._id)[0]
+        return self._record
+
+    def get_entry(self):
+        return {
+            &#34;type&#34;: &#34;mongo_reference&#34;,
+            &#34;mongo_collection&#34;: self._collection,
+            &#34;mongo_id&#34;: self._id
+        }
+
+    def __str__(self):
+        return &#34;&lt;ReferenceValue collection={} id={}&gt;&#34;.format(self._collection, self._id)
+
+    def __repr__(self):
+        return self.__str__()</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="py_wasp.ReferenceValue.get_entry"><code class="name flex">
+<span>def <span class="ident">get_entry</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_entry(self):
+    return {
+        &#34;type&#34;: &#34;mongo_reference&#34;,
+        &#34;mongo_collection&#34;: self._collection,
+        &#34;mongo_id&#34;: self._id
+    }</code></pre>
+</details>
+</dd>
+<dt id="py_wasp.ReferenceValue.get_record"><code class="name flex">
+<span>def <span class="ident">get_record</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_record(self):
+    if self._record is None:
+        self._record = self._conduit.find_records(collection=self._collection,
+                                                  record_spec=self._id)[0]
+    return self._record</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="py_wasp.SystemInfo"><code class="flex name class">
+<span>class <span class="ident">SystemInfo</span></span>
+<span>(</span><span>system_info_record)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Wasp collection system info.
+:param system_info_record: Wasp system_info_record as a dictionary String -&gt; String.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SystemInfo:
+    def __init__(self, system_info_record):
+        &#34;&#34;&#34;
+        Wasp collection system info.
+        :param system_info_record: Wasp system_info_record as a dictionary String -&gt; String.
+        &#34;&#34;&#34;
+        self._system_info = system_info_record
+
+    @property
+    def tags(self) -&gt; List[str]:
+        &#34;&#34;&#34;
+        :return: list of all defined tags names for the collection.
+        &#34;&#34;&#34;
+        return list(self._system_info.keys())
+
+    @property
+    def key_tags(self) -&gt; List[str]:
+        &#34;&#34;&#34;
+        Get key tags of a collection.
+        :return: mandatory tags array
+        &#34;&#34;&#34;
+        return [t for t in self.tags if self._system_info[t][&#39;isKey&#39;]]
+
+    @property
+    def mandatory_tags(self) -&gt; List[str]:
+        &#34;&#34;&#34;
+        Get mandatory tags of a collection.
+        :return: mandatory tags array
+        &#34;&#34;&#34;
+        return [t for t in self.tags if self._system_info[t][&#39;isMandatory&#39;]]
+
+    def get_default_value(self, tag) -&gt; str:
+        &#34;&#34;&#34;
+        :param tag: tag name (string).
+        :return: tag default value (string).
+        &#34;&#34;&#34;
+        if tag not in self.tags:
+            raise ValueError(&#39;Tag: &#39; + tag + &#39; not found in system tags&#39;)
+        return self._system_info[tag].get(&#39;defaultValue&#39;, None)
+
+    def get_possible_values(self, tag) -&gt; List[str]:
+        &#34;&#34;&#34;
+        :param tag: tag name (string).
+        :return: list of possible values for the specified tag.
+        &#34;&#34;&#34;
+        if tag not in self.tags:
+            raise ValueError(&#39;Tag: &#39; + tag + &#39; not found in system tags&#39;)
+        return self._system_info[tag].get(&#39;select&#39;, None)</code></pre>
+</details>
+<h3>Instance variables</h3>
+<dl>
+<dt id="py_wasp.SystemInfo.key_tags"><code class="name">var <span class="ident">key_tags</span> : List[str]</code></dt>
+<dd>
+<div class="desc"><p>Get key tags of a collection.
+:return: mandatory tags array</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def key_tags(self) -&gt; List[str]:
+    &#34;&#34;&#34;
+    Get key tags of a collection.
+    :return: mandatory tags array
+    &#34;&#34;&#34;
+    return [t for t in self.tags if self._system_info[t][&#39;isKey&#39;]]</code></pre>
+</details>
+</dd>
+<dt id="py_wasp.SystemInfo.mandatory_tags"><code class="name">var <span class="ident">mandatory_tags</span> : List[str]</code></dt>
+<dd>
+<div class="desc"><p>Get mandatory tags of a collection.
+:return: mandatory tags array</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def mandatory_tags(self) -&gt; List[str]:
+    &#34;&#34;&#34;
+    Get mandatory tags of a collection.
+    :return: mandatory tags array
+    &#34;&#34;&#34;
+    return [t for t in self.tags if self._system_info[t][&#39;isMandatory&#39;]]</code></pre>
+</details>
+</dd>
+<dt id="py_wasp.SystemInfo.tags"><code class="name">var <span class="ident">tags</span> : List[str]</code></dt>
+<dd>
+<div class="desc"><p>:return: list of all defined tags names for the collection.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def tags(self) -&gt; List[str]:
+    &#34;&#34;&#34;
+    :return: list of all defined tags names for the collection.
+    &#34;&#34;&#34;
+    return list(self._system_info.keys())</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="py_wasp.SystemInfo.get_default_value"><code class="name flex">
+<span>def <span class="ident">get_default_value</span></span>(<span>self, tag) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>:param tag: tag name (string).
+:return: tag default value (string).</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_default_value(self, tag) -&gt; str:
+    &#34;&#34;&#34;
+    :param tag: tag name (string).
+    :return: tag default value (string).
+    &#34;&#34;&#34;
+    if tag not in self.tags:
+        raise ValueError(&#39;Tag: &#39; + tag + &#39; not found in system tags&#39;)
+    return self._system_info[tag].get(&#39;defaultValue&#39;, None)</code></pre>
+</details>
+</dd>
+<dt id="py_wasp.SystemInfo.get_possible_values"><code class="name flex">
+<span>def <span class="ident">get_possible_values</span></span>(<span>self, tag) ‑> List[str]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>:param tag: tag name (string).
+:return: list of possible values for the specified tag.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_possible_values(self, tag) -&gt; List[str]:
+    &#34;&#34;&#34;
+    :param tag: tag name (string).
+    :return: list of possible values for the specified tag.
+    &#34;&#34;&#34;
+    if tag not in self.tags:
+        raise ValueError(&#39;Tag: &#39; + tag + &#39; not found in system tags&#39;)
+    return self._system_info[tag].get(&#39;select&#39;, None)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="py_wasp.ViewConfig"><code class="flex name class">
+<span>class <span class="ident">ViewConfig</span></span>
+<span>(</span><span>view_config_record)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Wasp collection view configuration.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ViewConfig:
+    Column = namedtuple(&#39;Column&#39;, [&#39;name&#39;, &#39;calculate_path&#39;])
+
+    def __init__(self, view_config_record):
+        &#34;&#34;&#34;
+        Wasp collection view configuration.
+        &#34;&#34;&#34;
+        self._columns = [ViewConfig.Column(name=p[&#39;name&#39;], calculate_path=p[&#39;calculatePath&#39;])
+                         for p in view_config_record.get(&#39;properties&#39;, [])]
+
+    @property
+    def columns(self) -&gt; List[&#39;ViewConfig.Column&#39;]:
+        &#34;&#34;&#34;
+        :return: list of Column objects describing the columns to display.
+        &#34;&#34;&#34;
+        return self._columns</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="py_wasp.ViewConfig.Column"><code class="name">var <span class="ident">Column</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="py_wasp.ViewConfig.columns"><code class="name">var <span class="ident">columns</span> : List[py_wasp.Column]</code></dt>
+<dd>
+<div class="desc"><p>:return: list of Column objects describing the columns to display.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def columns(self) -&gt; List[&#39;ViewConfig.Column&#39;]:
+    &#34;&#34;&#34;
+    :return: list of Column objects describing the columns to display.
+    &#34;&#34;&#34;
+    return self._columns</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="py_wasp.Wasp"><code class="flex name class">
+<span>class <span class="ident">Wasp</span></span>
+<span>(</span><span>server_urls: Union[str, List[str], None] = None, upload_only_urls: Optional[List[str]] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Interface for WASP.
+Wasp Record is defined as a dictionary: tag -&gt; value,
+where tag is a String and value can be a String, boolean, int, float or a FileValue.
+Keys and values in other formats are converted to Strings when possible.</p>
+<p>:param server_urls: server urls with ports as a list or a as a single value.
+:param upload_only_urls: server urls for uploads in case they are different from downloads.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Wasp:
+    &#34;&#34;&#34;
+    Interface for WASP.
+    Wasp Record is defined as a dictionary: tag -&gt; value,
+        where tag is a String and value can be a String, boolean, int, float or a FileValue.
+    Keys and values in other formats are converted to Strings when possible.
+    &#34;&#34;&#34;
+
+    # Values are good enough for most uses, no need to define as input.
+    # Usually required only if Wasp is updating a server, which usually takes less than a second to complete.
+    # But if entry is uploaded exactly in time - it will be lost if not reattempted.
+    _RETRY_DELAY = 4  # Retry to upload / download after _RETRY_DELAY seconds
+    _RETRY_ATTEMPTS = 4  # Retry to upload / download _RETRY_ATTEMPTS times
+
+    def __init__(self,
+                 server_urls: Optional[Union[str, List[str]]] = None,
+                 upload_only_urls: Optional[List[str]] = None):
+        &#34;&#34;&#34;
+        :param server_urls: server urls with ports as a list or a as a single value.
+        :param upload_only_urls: server urls for uploads in case they are different from downloads.
+        &#34;&#34;&#34;
+        if server_urls is None:
+            server_urls = []
+        elif not isinstance(server_urls, list):
+            server_urls = [server_urls]
+        self._download_urls = [url if str(url).startswith(&#39;http&#39;) else &#39;http://&#39; + str(url)
+                               for url in server_urls if url]
+        if upload_only_urls is None or len(upload_only_urls) == 0:
+            upload_only_urls = self._download_urls
+        elif not isinstance(upload_only_urls, list):
+            upload_only_urls = [upload_only_urls]
+        self._upload_urls = [url if str(url).startswith(&#39;http&#39;) else &#39;http://&#39; + str(url)
+                             for url in upload_only_urls if url]
+        # disable SSL certificate warnings:
+        urllib3.disable_warnings()
+        self._auth = HTTPKerberosAuth(mutual_authentication=OPTIONAL)
+        self._proxies = {&#34;http&#34;: None, &#34;https&#34;: None}
+        self._session = requests.Session()
+
+    def __del__(self):
+        self._session.close()
+
+    @property
+    def public_url(self) -&gt; str or None:
+        &#34;&#34;&#34;
+        :return: Public url to conduit
+        &#34;&#34;&#34;
+        if not self._download_urls:
+            return None
+        return self._download_urls[0]
+
+    def add_record(self,
+                   collection: str,
+                   record: Dict[str, Union[str, FileValue, ReferenceValue, Dict]]) \
+            -&gt; Dict[str, Union[str, int, float, bool, FileValue, ReferenceValue, Dict]]:
+        &#34;&#34;&#34;
+        Create a record in Wasp.
+
+        :param collection: collection name.
+        :param record: a dictionary tag -&gt; value, where tag is s String and value can be a String, a FileValue,
+            list or dictionary.
+        :return: newly created record as a dictionary tag -&gt; value,
+            where tag is s String and value can be a String or a FileValue.
+        &#34;&#34;&#34;
+
+        return self._as_record(self._upload([&#39;tools&#39;, collection, &#39;records&#39;], tags=Wasp._strip(record.copy())))
+
+    def update_mutable_record(self, collection: str, record_id: str,
+                              update_spec: Dict[str, Union[str, FileValue, ReferenceValue, Dict]],
+                              remove_tags: Sequence[str] = ()) \
+            -&gt; Dict[str, Union[str,  int, float, bool, FileValue, ReferenceValue, Dict]]:
+        &#34;&#34;&#34;
+        Update mutable record.
+
+        :param collection: collection name.
+        :param record_id: specific record id to update.
+        :param update_spec: dictionary-&gt; tags to update or create,
+        :param remove_tags: list -&gt; tags names to remove.
+        :return: updated record as a dictionary tag -&gt; value,
+                where tag is s String and value can be a String or a FileValue.
+        &#34;&#34;&#34;
+        return self._as_record(self._update_mutable([&#39;tools&#39;, collection, &#39;records&#39;, record_id, &#39;update&#39;],
+                                                    spec=Wasp._strip(update_spec.copy()), remove=remove_tags))
+
+    def set_immutable(self, collection: str, record_id: str) \
+            -&gt; Dict[str, Union[str, FileValue, ReferenceValue, Dict]]:
+        &#34;&#34;&#34;
+        Set mutable record to be Immutable.
+
+        :param collection: collection name.
+        :param record_id: specific record id to update.
+        &#34;&#34;&#34;
+        records = self.find_records(collection=collection, record_spec=record_id, latest=True)
+        if len(records) == 0:
+            raise Exception(&#39;Error: record &#39; + str(record_id) + &#39; not found&#39;)
+        if not self._record_is_mutable(record_tags=records[0]):
+            return records[0]
+        path = [&#39;tools&#39;, collection, &#39;records&#39;, record_id, &#39;set_immutable&#39;]
+        return self._as_record(self._update_mutable(path=path, spec=dict(), remove=dict()))
+
+    def set_mutable(self, collection: str, record_id: str) \
+            -&gt; Dict[str, Union[str, FileValue, ReferenceValue, Dict]]:
+        &#34;&#34;&#34;
+                Set immmutable record to be mutable.
+                :param collection: collection name.
+                :param record_id: specific record id to update. &#34;&#34;&#34;
+        records = self.find_records(collection=collection, record_spec=record_id, latest=True)
+        if len(records) == 0:
+            raise Exception(&#39;Error: record &#39; + str(record_id) + &#39; not found&#39;)
+        path = [&#39;tools&#39;, collection, &#39;records&#39;, record_id, &#39;set_mutable&#39;]
+        return self._as_record(self._update_mutable(path=path, spec=dict(), remove=dict()))
+
+    def is_mutable(self, collection, record_id: str) -&gt; bool:
+        &#34;&#34;&#34;
+                Check if a record is mutable.
+                :param collection: collection name.
+                :param record_id: string _id &#34;&#34;&#34;
+        records = self.find_records(collection=collection, record_spec=record_id, latest=True)
+        if len(records) == 0:
+            raise Exception(&#39;Error: Could not find record with ID &#39; + str(record_id))
+
+        return self._record_is_mutable(record_tags=records[0])
+
+    @staticmethod
+    def _record_is_mutable(record_tags: dict) -&gt; bool:
+        return record_tags.get(&#39;conduit_mutable&#39;, True)
+
+    def find_records(self, collection: str,
+                     record_spec: Optional[Union[str, Dict[str, Union[str, FileValue, ReferenceValue, Dict]]]] = None,
+                     latest: bool = True) -&gt; List[Dict[str, Union[str, FileValue, ReferenceValue, Dict]]]:
+        &#34;&#34;&#34;
+        Finds all the records that follow the spec. Spec is defined as a common part of records to find.
+        :param collection: collection name.
+        :param record_spec: (optional) string _id or dictionary tag -&gt; value, default: None.
+            that defines tag values of the requested records.
+            If value is a list, then returned entries will contain all possibilities where any of the values is present.
+        :param latest: (optional) whether to select all or only latest records (defined by collection). default: True.
+        :return: list of records in a format dictionary tag -&gt; value,
+            where tag is s String and value can be a String or a FileValue.
+        &#34;&#34;&#34;
+        path = [&#39;tools&#39;, collection, &#39;records&#39;]
+        if record_spec and not isinstance(record_spec, dict):
+            path.append(str(record_spec))
+            # by _id is always latest.
+            return [self._as_record(self._get(path, params=None))]
+        if latest:
+            path.append(&#39;latest&#39;)
+        return self._as_record(self._get(path=path, params=record_spec))
+
+    def delete_record(self, collection: str, record_id: str) -&gt; bool:
+        &#34;&#34;&#34;
+        Delete the record with given record_id.
+
+        :param collection: collection name.
+        :param record_id: specific record id to delete.
+        :return: True is deleted successfully, False otherwise.
+        &#34;&#34;&#34;
+        # restAPI which allows only admin instance permission to delete records
+        path = [&#39;utils&#39;, &#39;safeDeleteRecords&#39;]
+        unique_name = collection + record_id
+        json = {&#39;tool&#39;: collection, &#39;query&#39;: {&#39;unique_name&#39;: unique_name}}
+        if len(self._download_urls) == 0:
+            # This can happen if only upload urls are provided.
+            logging.critical(&#39;No download server url provided.&#39;)
+            return False
+        exception = ValueError(&#39;No value found&#39;)
+        for _ in range(Wasp._RETRY_ATTEMPTS):
+            for server_url in self._download_urls:
+                try:
+                    url = self._url_join(url=server_url, paths=path)
+                    response = self._session.post(url, auth=self._auth, verify=False, proxies=self._proxies, json=json)
+                    if response.status_code not in [200, 201]:  # HTTP_SUCCESS
+                        exception = ConnectionRefusedError(response.text)
+                        continue
+                    return True
+                except Exception as e:
+                    exception = e
+                    continue
+        raise exception
+
+    @staticmethod
+    def get_record_id(record: Dict[str, Union[str, FileValue, ReferenceValue, Dict]]) -&gt; str or None:
+        &#34;&#34;&#34;
+        Returns a record id
+        :param record: record dictionary
+        :return: str
+        &#34;&#34;&#34;
+        if record is None:
+            return None
+        return record.get(&#34;_id&#34;, None)
+
+    def set_record_metadata(self,
+                            collection: str,
+                            record_id: str,
+                            meta_part) -&gt; Dict[str, Union[str, FileValue, ReferenceValue, Dict]]:
+        &#34;&#34;&#34;
+        Some records may have metadata. Metadata can be modified without changing a record.
+        Metadata is very resource hungry for Wasp. Try using a minimum required number of meta tags.
+        :param collection: collection name as a String.
+        :param record_id: record &#34;_id&#34; tag value or unique_name tag value.
+        :param meta_part: is a partial record where all keys are meta keys.
+            Same format as record. If key is not a meta key - function will fail.
+            If key does not exist, it will create a new meta key.
+        :return: record
+        &#34;&#34;&#34;
+        return self._as_record(self._put([&#39;tools&#39;, collection, &#39;records&#39;, record_id, &#39;meta&#39;], tags=meta_part))
+
+    def get_record_history(self,
+                           collection: str,
+                           record_id: str) -&gt; List[Dict[str, Union[str, FileValue, ReferenceValue, Dict]]]:
+        &#34;&#34;&#34;
+        Get complete history of the specified record.
+        :param collection: collection name as a String.
+        :param record_id: record &#34;_id&#34; tag value or unique_name tag value.
+        :return: list of records in a format dictionary tag -&gt; value,
+            where tag is s String and value can be a String or a FileValue.
+        &#34;&#34;&#34;
+        return self._as_record(self._get([&#39;tools&#39;, collection, &#39;records&#39;, record_id, &#39;history&#39;]))
+
+    def open(self, file_id: str) -&gt; BinaryIO:
+        &#34;&#34;&#34;
+        Opens a io.Stream by mongo id. Must be closed.
+        :param file_id: Wasp file file_id tag value.
+        :return: io.BytesIO
+        &#34;&#34;&#34;
+        response = self._get([&#39;file&#39;, file_id])
+        # TODO: Possibly bad implementation.
+        stream = io.BytesIO(response.content)
+        stream.name = response.headers[&#39;content-disposition&#39;].split(&#39;filename=&#39;)[1]
+        return stream
+
+    def download(self, file_id: str, dir_path: str, file_name: str = None) -&gt; str:
+        &#34;&#34;&#34;
+        Download a file by mongo id without opening a stream. Use for big files.
+        :param file_id: Wasp file file_id tag value.
+        :param dir_path: writable destination directory
+        :param file_name: optional file name. If not given will create with original file name.
+        :return: file path.
+        &#34;&#34;&#34;
+        try:
+            if not os.access(dir_path, os.W_OK):
+                raise (Exception(&#39;Wasp API does not have write permission to &#39; + dir_path))
+            # Need to set this url but it&#39;s not pushed yet
+            # res = self._get(&#39;tools&#39;, collection, &#39;records&#39;, record_id, &#39;files&#39;, file_tag)
+            response = self._get([&#39;file&#39;, file_id], streaming=True)
+            if file_name is None:
+                file_name = response.headers[&#39;content-disposition&#39;].split(&#39;filename=&#39;)[1]
+            file_path = os.path.join(dir_path, file_name)
+            # TODO: Possibly Bad implementation, but it is a taken from requests official documentation..
+            with open(file_path, &#39;wb&#39;) as f:
+                for chunk in response.iter_content(chunk_size=1024):
+                    if chunk:
+                        f.write(chunk)
+        except Exception as e:
+            # TODO: Check if required to close response stream, because it may be left open.
+            raise Exception(&#39;Error: Failed to download a file - &#39; + str(e))
+        return file_path
+
+    def get_system_info(self, collection: str) -&gt; SystemInfo:
+        &#34;&#34;&#34;
+        Get information about collection (required tags, key tags, types, ...)
+        :param collection: Wasp collection name as a String.
+        :return: System info class, which gives services about it
+        &#34;&#34;&#34;
+        return SystemInfo(
+            system_info_record=self._as_record(self._get(path=[&#39;system&#39;, &#39;tools&#39;, collection, &#39;tags_object&#39;])))
+
+    def get_tag_values(self,
+                       collection: str,
+                       tag: str) -&gt; List[Dict[str, Union[str, FileValue, ReferenceValue, Dict]]]:
+        &#34;&#34;&#34;
+        Get possible values for the specified tag (attribute) from the existing records.
+        Very long function that can be used for autocomplete. Do not call more than once.
+        :param collection: Wasp collection name as a String.
+        :param tag: name of the record tag
+        :return: list of values already used in collection
+        &#34;&#34;&#34;
+        return self._as_record(self._get([&#39;tools&#39;, collection, &#39;tags&#39;, tag, &#39;values&#39;]))
+
+    def get_view_info(self, collection: str, view_name: str = &#34;default&#34;) -&gt; ViewConfig:
+        &#34;&#34;&#34;
+        Get information about how to display documents in a collection. (columns, sorting order, ...)
+        :param collection: Wasp collection name as a String.
+        :param view_name: view name (default: &#34;default&#34;)
+        :return: ViewConfig object
+        &#34;&#34;&#34;
+        return ViewConfig(
+            view_config_record=self._as_record(self._get([&#39;system&#39;, &#39;view_config&#39;, collection, view_name])))
+
+    def run_action(self, action: str, params=None):
+        &#34;&#34;&#34;
+        Trigger a registered action on the server.
+        The server should have a record in &#34;services&#34; collection with name=&lt;action&gt; cmd=... and args=[...]
+
+        :param action: action name. The action should be registered with the WASP/Conduit server.
+        :param params: (optional) dictionary with action arguments.
+            Pass {stderr: True, stdout: True} to get stdout/stderr collection into DB files.
+        :return: action result json. An error is raised if the action terminated with non-zero status.
+
+        :example:
+            &gt;&gt;&gt; c = Wasp(&#34;...&#34;)
+            &gt;&gt;&gt; c.run_action(&#34;myaction&#34;, params={&#34;MY_PARAM1&#34;: &#34;1&#34;, &#34;MY_PARAM2&#34;: &#34;2&#34;})
+        &#34;&#34;&#34;
+        params = params or {}
+        # Add these to obtain stdout/stderr from the command:
+        # &#39;stdout&#39;: True,
+        # &#39;stderr&#39;: True
+        resp = self._requests_call(
+            path=[&#34;actions&#34;, &#34;services&#34;, action],
+            tags=params,
+            requests_function=self._session.post,
+            retry=False
+        )
+        if resp.status_code != 200:
+            # TODO: need to propagate error from the response
+            raise Exception(&#34;Running action failed&#34;)
+
+        return self._json_to_record(resp.json())
+
+    def _get(self, path: List[str], tags=None, params=None, streaming: bool = False):
+        if len(self._download_urls) == 0:
+            # This can happen if only upload urls are provided.
+            logging.critical(&#39;No download server url provided.&#39;)
+            return None
+        exception = ValueError(&#39;No value found&#39;)
+        for _ in range(Wasp._RETRY_ATTEMPTS):
+            for server_url in self._download_urls:
+                try:
+                    url = self._url_join(url=server_url, paths=path, params=params)
+                    response = self._session.get(url, auth=self._auth, verify=False, json=tags, proxies=self._proxies,
+                                                 stream=streaming)
+                    if response.status_code not in [200, 201]:
+                        exception = ConnectionRefusedError(response.text)
+                        continue
+                    return response
+                except Exception as e:
+                    exception = e
+                    continue
+            time.sleep(Wasp._RETRY_DELAY)
+        raise exception
+
+    def _upload(self, path, tags=None):
+        try:
+            return self._requests_multipart_call(path=path, tags=tags, requests_function=self._session.post)
+        except RuntimeError:
+            pass
+        return self._requests_call(path=path, tags=tags, requests_function=self._session.post)
+
+    def _put(self, path, tags=None):
+        try:
+            return self._requests_multipart_call(path=path, tags=tags, requests_function=self._session.put)
+        except RuntimeError:
+            pass
+        return self._requests_call(path=path, tags=tags, requests_function=self._session.put)
+
+    def _requests_call(self, path: Sequence[str], tags: dict, requests_function, retry=True):
+        &#34;&#34;&#34;
+        Invokes requests_function with server URL and specified relative path
+        NOTE: for post/put requests this function ALWAYS uses form/multi-part format (not application/json).
+
+        :param path: relative path as sequence of strings. Example: [&#34;tools&#34;, collection, &#34;records&#34;]
+        :param tags:
+        :param requests_function:
+        :param retry: if True, perform several attampts until successful
+
+        :return: HTTP response object. An exception is raised if request is unsuccessful.
+        &#34;&#34;&#34;
+        # Remove code duplication
+        if len(self._upload_urls) == 0:
+            # If any url provided, this will not happen.
+            logging.critical(&#39;No server url provided.&#39;)
+            return None
+        exception = ValueError(&#39;Cannot upload a value.&#39;)
+
+        attempts = Wasp._RETRY_ATTEMPTS if retry else 1
+
+        for _ in range(attempts):
+            for server_url in self._upload_urls:
+                try:
+                    url = Wasp._url_join(url=server_url, paths=path)
+                    data = {}
+                    all_files = {}
+                    if tags:
+                        Wasp._json_to_data(tags, data, all_files)
+                    if not all_files:
+                        # Empty file tag is ignored, but it will not work without.
+                        all_files = {&#39;&#39;: io.StringIO()}
+                    response = requests_function(url, auth=self._auth, verify=False, data=data, files=all_files,
+                                                 proxies=self._proxies)
+                    if response.status_code not in [200, 201]:  # HTTP_CREATED
+                        # TODO: Handle status_code to raise correct error.
+                        exception = ConnectionRefusedError(response.text)
+                        continue
+                    return response
+                except Exception as e:
+                    exception = e
+                    continue
+            time.sleep(Wasp._RETRY_DELAY)
+        raise exception
+
+    def _requests_multipart_call(self, path, tags, requests_function):
+        &#34;&#34;&#34;
+        Variation of _requests_call with &#34;tags&#34; being sent using
+        explicit JSON-to-string encoding for preserving value types.
+
+        :param path: list of path components
+        :param tags: dict of tags
+        :param requests_function: self._session.post or self._session.put
+        :return: HTTP response object
+        &#34;&#34;&#34;
+        # Remove code duplication
+        if len(self._upload_urls) == 0:
+            # If any url provided, this will not happen.
+            logging.critical(&#39;No server url provided.&#39;)
+            return None
+        exception = ValueError(&#39;Cannot upload a value.&#39;)
+        for _ in range(Wasp._RETRY_ATTEMPTS):
+            for server_url in self._upload_urls:
+                try:
+                    url = Wasp._url_join(url=server_url, paths=path)
+                    json_tags, files = Wasp._json_to_multipart(tags=tags)
+                    multipart = {&#39;conduit_json&#39;: (None, dumps(json_tags), &#39;application/json&#39;)}
+                    for file_key, file_stream in files.items():
+                        multipart[file_key] = (os.path.basename(file_stream.name), file_stream,
+                                               &#39;application/octet-stream&#39;)
+                    response = requests_function(url, auth=self._auth, verify=False, files=multipart,
+                                                 proxies=self._proxies)
+                    if response.status_code not in [200, 201]:  # HTTP_CREATED
+                        if response.status_code == 404:
+                            raise RuntimeError(response.text)
+                        # TODO: Handle status_code to raise correct error.
+                        exception = ConnectionRefusedError(response.text)
+                        continue
+                    return response
+                except RuntimeError as e:
+                    raise e
+                except Exception as e:
+                    exception = e
+                    continue
+            time.sleep(Wasp._RETRY_DELAY)
+        raise exception
+
+    def _update_mutable(self, path, spec: dict, remove: Sequence[str]):
+        &#34;&#34;&#34;
+        Update mutable record adding/modifying values in SPEC and removing value in REMOVE
+        &#34;&#34;&#34;
+        if len(self._upload_urls) == 0:
+            # If any url provided, this will not happen.
+            logging.critical(&#39;No server url provided.&#39;)
+            return None
+
+        exception = ValueError(&#39;Cannot upload a value.&#39;)
+        for _ in range(Wasp._RETRY_ATTEMPTS):
+            for server_url in self._upload_urls:
+                try:
+                    url = Wasp._url_join(url=server_url, paths=path)
+                    json_tags, files = Wasp._json_to_multipart(tags=spec)
+                    multipart = {&#39;conduit_update&#39;: (None, dumps(json_tags), &#39;application/json&#39;)}
+                    for file_key, file_stream in files.items():
+                        multipart[file_key] = (os.path.basename(file_stream.name), file_stream,
+                                               &#39;application/octet-stream&#39;)
+                    multipart[&#39;conduit_remove&#39;] = (None, dumps(remove), &#39;application/json&#39;)
+                    response = self._session.put(url, auth=self._auth, verify=False, files=multipart,
+                                                 proxies=self._proxies)
+                    if response.status_code not in [200, 201]:  # HTTP_CREATED
+                        if response.status_code == 404:
+                            raise RuntimeError(response.text)
+                        # TODO: Handle status_code to raise correct error.
+                        exception = ConnectionRefusedError(response.text)
+                        continue
+                    return response
+                except RuntimeError as e:
+                    raise e
+                except Exception as e:
+                    exception = e
+                    continue
+            time.sleep(Wasp._RETRY_DELAY)
+        raise exception
+
+    @staticmethod
+    def _json_to_multipart(tags: Dict[str, Any]) -&gt; Tuple[Dict[str, Any], Dict[str, FileValue]]:
+        &#34;&#34;&#34;
+        Replace files with file placeholders and record reference value
+        :param tags: INPUT file - dictionary
+        :return: None
+        &#34;&#34;&#34;
+        result = {}
+        files = {}
+        for k, v in tags.items():
+            if isinstance(v, dict):
+                result[k], f = Wasp._json_to_multipart(v)
+                files.update(f)
+                continue
+            if isinstance(v, FileValue):
+                v.seek(0)
+                name = str(id(v))
+                files[name] = v
+                result[k] = {&#34;type&#34;: &#34;conduit_file&#34;, &#34;name&#34;: name}
+                continue
+            if isinstance(v, ReferenceValue):
+                # need to extract json entry for json content:
+                result[k] = v.get_entry()
+                continue
+            result[k] = v
+        return result, files
+
+    def _as_record(self, response):
+        &#34;&#34;&#34;
+        Wrapper to recursive _json_to_record.
+        :param response: requests response
+        :return: Wasp record
+        &#34;&#34;&#34;
+        if response is None:
+            return None
+        return self._json_to_record(response.json())
+
+    def _json_to_record(self, json_dict):
+        &#34;&#34;&#34;
+        Recursive function that converts a dictionary to an entry.
+        :param json_dict: json formatted dictionary.
+        :return: entry
+        &#34;&#34;&#34;
+        if json_dict is None:
+            return None
+        if isinstance(json_dict, list):
+            new_json = []
+            for j in json_dict:
+                new_json.append(self._json_to_record(j))
+            return new_json
+        if isinstance(json_dict, dict):
+            if &#39;type&#39; in json_dict.keys():
+                if json_dict[&#39;type&#39;] == &#39;mongo_file&#39;:
+                    return FileValue(value=json_dict[&#39;mongo_id&#39;], name=json_dict[&#39;name&#39;], conduit=self)
+                if json_dict[&#39;type&#39;] == &#39;mongo_reference&#39;:
+                    return ReferenceValue(value=json_dict[&#39;mongo_id&#39;],
+                                          collection=json_dict[&#39;mongo_collection&#39;],
+                                          conduit=self)
+                # Do not change records of some &#39;type&#39; which are not a mongo_file.
+                # They may be special cases that may require API extensions.
+                # return json_dict
+            new_json = {}
+            for key in json_dict.keys():
+                new_json[key] = self._json_to_record(json_dict[key])
+            return new_json
+        return json_dict
+
+    @staticmethod
+    def _url_join(url, paths: Sequence[str], params=None):
+        &#34;&#34;&#34;
+        Join parts of URL with parameters
+        :param url: base url (possibly with parameters) +
+        :param paths: additional paths
+        :param params: additional parameters
+        :return: new URL string
+        &#34;&#34;&#34;
+        parsed_url = urlparse(url)
+        if len(paths):
+            # append paths to base url path
+            base_path = str(parsed_url.path).split(&#39;/&#39;) if parsed_url.path != &#39;/&#39; else [&#39;&#39;]
+            parsed_path = &#39;/&#39;.join(base_path + list(paths))
+        else:
+            parsed_path = parsed_url.path
+
+        if params is not None:
+            parsed_query = parse_qsl(parsed_url.query, keep_blank_values=True)
+            out_dict = {}
+            Wasp._flatten(tags=params, data=out_dict)
+            parsed_query.extend(out_dict.items())
+            parsed_query = urlencode(parsed_query)
+        else:
+            parsed_query = parsed_url.query
+        parsed_url = urlunparse((parsed_url[0], parsed_url[1], parsed_path, parsed_url[3], parsed_query, parsed_url[5]))
+        return parsed_url
+
+    @staticmethod
+    def _flatten(tags, data, prefix=&#39;&#39;):
+        &#34;&#34;&#34;
+        Convert hierarchical dictionary to a flat dict with indexed names in post data format
+        :param tags: INPUT file - dictionary
+        :param data: OUTPUT dict must be defined
+        :param prefix: recursion parameter
+        :return: None
+        &#34;&#34;&#34;
+        for k, v in tags.items():
+            if isinstance(v, dict):
+                sub_key = k + &#39;.&#39; if prefix == &#39;&#39; else prefix + k + &#39;.&#39;
+                Wasp._flatten(tags=v, data=data, prefix=sub_key)
+                continue
+            sub_key = k if prefix == &#39;&#39; else prefix + k
+            if isinstance(v, list):
+                data[sub_key] = &#39;,&#39;.join(v)
+                continue
+            data[sub_key] = v
+
+    @staticmethod
+    def _json_to_data(tags, data, files, prefix=&#39;&#39;):
+        &#34;&#34;&#34;
+        Convert hierarchical dictionary to a flat dict with indexed names in post data format
+        :param tags: INPUT file - dictionary
+        :param data: OUTPUT file must be defined
+        :param files: OUTPUT file must be defined
+        :param prefix: recursion parameter
+        :return: None
+        &#34;&#34;&#34;
+        for k, v in tags.items():
+            sub_key = k + &#39;[&#39; if prefix == &#39;&#39; else prefix + k + &#39;][&#39;
+            if isinstance(v, dict):
+                Wasp._json_to_data(v, data, files, prefix=sub_key)
+                continue
+            if isinstance(v, ReferenceValue):
+                Wasp._json_to_data(v.get_entry(), data, files, prefix=sub_key)
+                continue
+            sub_key = k if prefix == &#39;&#39; else prefix + k + &#39;]&#39;
+            if isinstance(v, FileValue):
+                v.seek(0)
+                files[sub_key] = v
+                continue
+            data[sub_key] = v
+
+    @staticmethod
+    def _strip(record):
+        record.pop(&#39;date&#39;, None)
+        record.pop(&#39;_id&#39;, None)
+        record.pop(&#39;conduitVersion&#39;, None)
+        record.pop(&#39;unique_name&#39;, None)
+        record.pop(&#39;version&#39;, None)
+        try:
+            for k, v in record.items():
+                Wasp._strip(v)
+        except AttributeError:
+            pass
+        return record</code></pre>
+</details>
+<h3>Static methods</h3>
+<dl>
+<dt id="py_wasp.Wasp.get_record_id"><code class="name flex">
+<span>def <span class="ident">get_record_id</span></span>(<span>record: Dict[str, Union[str, <a title="py_wasp.FileValue" href="#py_wasp.FileValue">FileValue</a>, <a title="py_wasp.ReferenceValue" href="#py_wasp.ReferenceValue">ReferenceValue</a>, Dict[~KT, ~VT]]]) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a record id
+:param record: record dictionary
+:return: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def get_record_id(record: Dict[str, Union[str, FileValue, ReferenceValue, Dict]]) -&gt; str or None:
+    &#34;&#34;&#34;
+    Returns a record id
+    :param record: record dictionary
+    :return: str
+    &#34;&#34;&#34;
+    if record is None:
+        return None
+    return record.get(&#34;_id&#34;, None)</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="py_wasp.Wasp.public_url"><code class="name">var <span class="ident">public_url</span> : str</code></dt>
+<dd>
+<div class="desc"><p>:return: Public url to conduit</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def public_url(self) -&gt; str or None:
+    &#34;&#34;&#34;
+    :return: Public url to conduit
+    &#34;&#34;&#34;
+    if not self._download_urls:
+        return None
+    return self._download_urls[0]</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="py_wasp.Wasp.add_record"><code class="name flex">
+<span>def <span class="ident">add_record</span></span>(<span>self, collection: str, record: Dict[str, Union[str, <a title="py_wasp.FileValue" href="#py_wasp.FileValue">FileValue</a>, <a title="py_wasp.ReferenceValue" href="#py_wasp.ReferenceValue">ReferenceValue</a>, Dict[~KT, ~VT]]]) ‑> Dict[str, Union[str, int, float, bool, <a title="py_wasp.FileValue" href="#py_wasp.FileValue">FileValue</a>, <a title="py_wasp.ReferenceValue" href="#py_wasp.ReferenceValue">ReferenceValue</a>, Dict[~KT, ~VT]]]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Create a record in Wasp.</p>
+<p>:param collection: collection name.
+:param record: a dictionary tag -&gt; value, where tag is s String and value can be a String, a FileValue,
+list or dictionary.
+:return: newly created record as a dictionary tag -&gt; value,
+where tag is s String and value can be a String or a FileValue.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_record(self,
+               collection: str,
+               record: Dict[str, Union[str, FileValue, ReferenceValue, Dict]]) \
+        -&gt; Dict[str, Union[str, int, float, bool, FileValue, ReferenceValue, Dict]]:
+    &#34;&#34;&#34;
+    Create a record in Wasp.
+
+    :param collection: collection name.
+    :param record: a dictionary tag -&gt; value, where tag is s String and value can be a String, a FileValue,
+        list or dictionary.
+    :return: newly created record as a dictionary tag -&gt; value,
+        where tag is s String and value can be a String or a FileValue.
+    &#34;&#34;&#34;
+
+    return self._as_record(self._upload([&#39;tools&#39;, collection, &#39;records&#39;], tags=Wasp._strip(record.copy())))</code></pre>
+</details>
+</dd>
+<dt id="py_wasp.Wasp.delete_record"><code class="name flex">
+<span>def <span class="ident">delete_record</span></span>(<span>self, collection: str, record_id: str) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Delete the record with given record_id.</p>
+<p>:param collection: collection name.
+:param record_id: specific record id to delete.
+:return: True is deleted successfully, False otherwise.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def delete_record(self, collection: str, record_id: str) -&gt; bool:
+    &#34;&#34;&#34;
+    Delete the record with given record_id.
+
+    :param collection: collection name.
+    :param record_id: specific record id to delete.
+    :return: True is deleted successfully, False otherwise.
+    &#34;&#34;&#34;
+    # restAPI which allows only admin instance permission to delete records
+    path = [&#39;utils&#39;, &#39;safeDeleteRecords&#39;]
+    unique_name = collection + record_id
+    json = {&#39;tool&#39;: collection, &#39;query&#39;: {&#39;unique_name&#39;: unique_name}}
+    if len(self._download_urls) == 0:
+        # This can happen if only upload urls are provided.
+        logging.critical(&#39;No download server url provided.&#39;)
+        return False
+    exception = ValueError(&#39;No value found&#39;)
+    for _ in range(Wasp._RETRY_ATTEMPTS):
+        for server_url in self._download_urls:
+            try:
+                url = self._url_join(url=server_url, paths=path)
+                response = self._session.post(url, auth=self._auth, verify=False, proxies=self._proxies, json=json)
+                if response.status_code not in [200, 201]:  # HTTP_SUCCESS
+                    exception = ConnectionRefusedError(response.text)
+                    continue
+                return True
+            except Exception as e:
+                exception = e
+                continue
+    raise exception</code></pre>
+</details>
+</dd>
+<dt id="py_wasp.Wasp.download"><code class="name flex">
+<span>def <span class="ident">download</span></span>(<span>self, file_id: str, dir_path: str, file_name: str = None) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Download a file by mongo id without opening a stream. Use for big files.
+:param file_id: Wasp file file_id tag value.
+:param dir_path: writable destination directory
+:param file_name: optional file name. If not given will create with original file name.
+:return: file path.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def download(self, file_id: str, dir_path: str, file_name: str = None) -&gt; str:
+    &#34;&#34;&#34;
+    Download a file by mongo id without opening a stream. Use for big files.
+    :param file_id: Wasp file file_id tag value.
+    :param dir_path: writable destination directory
+    :param file_name: optional file name. If not given will create with original file name.
+    :return: file path.
+    &#34;&#34;&#34;
+    try:
+        if not os.access(dir_path, os.W_OK):
+            raise (Exception(&#39;Wasp API does not have write permission to &#39; + dir_path))
+        # Need to set this url but it&#39;s not pushed yet
+        # res = self._get(&#39;tools&#39;, collection, &#39;records&#39;, record_id, &#39;files&#39;, file_tag)
+        response = self._get([&#39;file&#39;, file_id], streaming=True)
+        if file_name is None:
+            file_name = response.headers[&#39;content-disposition&#39;].split(&#39;filename=&#39;)[1]
+        file_path = os.path.join(dir_path, file_name)
+        # TODO: Possibly Bad implementation, but it is a taken from requests official documentation..
+        with open(file_path, &#39;wb&#39;) as f:
+            for chunk in response.iter_content(chunk_size=1024):
+                if chunk:
+                    f.write(chunk)
+    except Exception as e:
+        # TODO: Check if required to close response stream, because it may be left open.
+        raise Exception(&#39;Error: Failed to download a file - &#39; + str(e))
+    return file_path</code></pre>
+</details>
+</dd>
+<dt id="py_wasp.Wasp.find_records"><code class="name flex">
+<span>def <span class="ident">find_records</span></span>(<span>self, collection: str, record_spec: Union[str, Dict[str, Union[str, <a title="py_wasp.FileValue" href="#py_wasp.FileValue">FileValue</a>, <a title="py_wasp.ReferenceValue" href="#py_wasp.ReferenceValue">ReferenceValue</a>, Dict[~KT, ~VT]]], None] = None, latest: bool = True) ‑> List[Dict[str, Union[str, <a title="py_wasp.FileValue" href="#py_wasp.FileValue">FileValue</a>, <a title="py_wasp.ReferenceValue" href="#py_wasp.ReferenceValue">ReferenceValue</a>, Dict[~KT, ~VT]]]]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Finds all the records that follow the spec. Spec is defined as a common part of records to find.
+:param collection: collection name.
+:param record_spec: (optional) string _id or dictionary tag -&gt; value, default: None.
+that defines tag values of the requested records.
+If value is a list, then returned entries will contain all possibilities where any of the values is present.
+:param latest: (optional) whether to select all or only latest records (defined by collection). default: True.
+:return: list of records in a format dictionary tag -&gt; value,
+where tag is s String and value can be a String or a FileValue.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def find_records(self, collection: str,
+                 record_spec: Optional[Union[str, Dict[str, Union[str, FileValue, ReferenceValue, Dict]]]] = None,
+                 latest: bool = True) -&gt; List[Dict[str, Union[str, FileValue, ReferenceValue, Dict]]]:
+    &#34;&#34;&#34;
+    Finds all the records that follow the spec. Spec is defined as a common part of records to find.
+    :param collection: collection name.
+    :param record_spec: (optional) string _id or dictionary tag -&gt; value, default: None.
+        that defines tag values of the requested records.
+        If value is a list, then returned entries will contain all possibilities where any of the values is present.
+    :param latest: (optional) whether to select all or only latest records (defined by collection). default: True.
+    :return: list of records in a format dictionary tag -&gt; value,
+        where tag is s String and value can be a String or a FileValue.
+    &#34;&#34;&#34;
+    path = [&#39;tools&#39;, collection, &#39;records&#39;]
+    if record_spec and not isinstance(record_spec, dict):
+        path.append(str(record_spec))
+        # by _id is always latest.
+        return [self._as_record(self._get(path, params=None))]
+    if latest:
+        path.append(&#39;latest&#39;)
+    return self._as_record(self._get(path=path, params=record_spec))</code></pre>
+</details>
+</dd>
+<dt id="py_wasp.Wasp.get_record_history"><code class="name flex">
+<span>def <span class="ident">get_record_history</span></span>(<span>self, collection: str, record_id: str) ‑> List[Dict[str, Union[str, <a title="py_wasp.FileValue" href="#py_wasp.FileValue">FileValue</a>, <a title="py_wasp.ReferenceValue" href="#py_wasp.ReferenceValue">ReferenceValue</a>, Dict[~KT, ~VT]]]]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get complete history of the specified record.
+:param collection: collection name as a String.
+:param record_id: record "_id" tag value or unique_name tag value.
+:return: list of records in a format dictionary tag -&gt; value,
+where tag is s String and value can be a String or a FileValue.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_record_history(self,
+                       collection: str,
+                       record_id: str) -&gt; List[Dict[str, Union[str, FileValue, ReferenceValue, Dict]]]:
+    &#34;&#34;&#34;
+    Get complete history of the specified record.
+    :param collection: collection name as a String.
+    :param record_id: record &#34;_id&#34; tag value or unique_name tag value.
+    :return: list of records in a format dictionary tag -&gt; value,
+        where tag is s String and value can be a String or a FileValue.
+    &#34;&#34;&#34;
+    return self._as_record(self._get([&#39;tools&#39;, collection, &#39;records&#39;, record_id, &#39;history&#39;]))</code></pre>
+</details>
+</dd>
+<dt id="py_wasp.Wasp.get_system_info"><code class="name flex">
+<span>def <span class="ident">get_system_info</span></span>(<span>self, collection: str) ‑> <a title="py_wasp.SystemInfo" href="#py_wasp.SystemInfo">SystemInfo</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get information about collection (required tags, key tags, types, &hellip;)
+:param collection: Wasp collection name as a String.
+:return: System info class, which gives services about it</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_system_info(self, collection: str) -&gt; SystemInfo:
+    &#34;&#34;&#34;
+    Get information about collection (required tags, key tags, types, ...)
+    :param collection: Wasp collection name as a String.
+    :return: System info class, which gives services about it
+    &#34;&#34;&#34;
+    return SystemInfo(
+        system_info_record=self._as_record(self._get(path=[&#39;system&#39;, &#39;tools&#39;, collection, &#39;tags_object&#39;])))</code></pre>
+</details>
+</dd>
+<dt id="py_wasp.Wasp.get_tag_values"><code class="name flex">
+<span>def <span class="ident">get_tag_values</span></span>(<span>self, collection: str, tag: str) ‑> List[Dict[str, Union[str, <a title="py_wasp.FileValue" href="#py_wasp.FileValue">FileValue</a>, <a title="py_wasp.ReferenceValue" href="#py_wasp.ReferenceValue">ReferenceValue</a>, Dict[~KT, ~VT]]]]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get possible values for the specified tag (attribute) from the existing records.
+Very long function that can be used for autocomplete. Do not call more than once.
+:param collection: Wasp collection name as a String.
+:param tag: name of the record tag
+:return: list of values already used in collection</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_tag_values(self,
+                   collection: str,
+                   tag: str) -&gt; List[Dict[str, Union[str, FileValue, ReferenceValue, Dict]]]:
+    &#34;&#34;&#34;
+    Get possible values for the specified tag (attribute) from the existing records.
+    Very long function that can be used for autocomplete. Do not call more than once.
+    :param collection: Wasp collection name as a String.
+    :param tag: name of the record tag
+    :return: list of values already used in collection
+    &#34;&#34;&#34;
+    return self._as_record(self._get([&#39;tools&#39;, collection, &#39;tags&#39;, tag, &#39;values&#39;]))</code></pre>
+</details>
+</dd>
+<dt id="py_wasp.Wasp.get_view_info"><code class="name flex">
+<span>def <span class="ident">get_view_info</span></span>(<span>self, collection: str, view_name: str = 'default') ‑> <a title="py_wasp.ViewConfig" href="#py_wasp.ViewConfig">ViewConfig</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get information about how to display documents in a collection. (columns, sorting order, &hellip;)
+:param collection: Wasp collection name as a String.
+:param view_name: view name (default: "default")
+:return: ViewConfig object</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_view_info(self, collection: str, view_name: str = &#34;default&#34;) -&gt; ViewConfig:
+    &#34;&#34;&#34;
+    Get information about how to display documents in a collection. (columns, sorting order, ...)
+    :param collection: Wasp collection name as a String.
+    :param view_name: view name (default: &#34;default&#34;)
+    :return: ViewConfig object
+    &#34;&#34;&#34;
+    return ViewConfig(
+        view_config_record=self._as_record(self._get([&#39;system&#39;, &#39;view_config&#39;, collection, view_name])))</code></pre>
+</details>
+</dd>
+<dt id="py_wasp.Wasp.is_mutable"><code class="name flex">
+<span>def <span class="ident">is_mutable</span></span>(<span>self, collection, record_id: str) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Check if a record is mutable.
+:param collection: collection name.
+:param record_id: string _id</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def is_mutable(self, collection, record_id: str) -&gt; bool:
+    &#34;&#34;&#34;
+            Check if a record is mutable.
+            :param collection: collection name.
+            :param record_id: string _id &#34;&#34;&#34;
+    records = self.find_records(collection=collection, record_spec=record_id, latest=True)
+    if len(records) == 0:
+        raise Exception(&#39;Error: Could not find record with ID &#39; + str(record_id))
+
+    return self._record_is_mutable(record_tags=records[0])</code></pre>
+</details>
+</dd>
+<dt id="py_wasp.Wasp.open"><code class="name flex">
+<span>def <span class="ident">open</span></span>(<span>self, file_id: str) ‑> <class 'BinaryIO'></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Opens a io.Stream by mongo id. Must be closed.
+:param file_id: Wasp file file_id tag value.
+:return: io.BytesIO</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def open(self, file_id: str) -&gt; BinaryIO:
+    &#34;&#34;&#34;
+    Opens a io.Stream by mongo id. Must be closed.
+    :param file_id: Wasp file file_id tag value.
+    :return: io.BytesIO
+    &#34;&#34;&#34;
+    response = self._get([&#39;file&#39;, file_id])
+    # TODO: Possibly bad implementation.
+    stream = io.BytesIO(response.content)
+    stream.name = response.headers[&#39;content-disposition&#39;].split(&#39;filename=&#39;)[1]
+    return stream</code></pre>
+</details>
+</dd>
+<dt id="py_wasp.Wasp.run_action"><code class="name flex">
+<span>def <span class="ident">run_action</span></span>(<span>self, action: str, params=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Trigger a registered action on the server.
+The server should have a record in "services" collection with name=<action> cmd=&hellip; and args=[&hellip;]</p>
+<p>:param action: action name. The action should be registered with the WASP/Conduit server.
+:param params: (optional) dictionary with action arguments.
+Pass {stderr: True, stdout: True} to get stdout/stderr collection into DB files.
+:return: action result json. An error is raised if the action terminated with non-zero status.</p>
+<p>:example:
+&gt;&gt;&gt; c = Wasp("&hellip;")
+&gt;&gt;&gt; c.run_action("myaction", params={"MY_PARAM1": "1", "MY_PARAM2": "2"})</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def run_action(self, action: str, params=None):
+    &#34;&#34;&#34;
+    Trigger a registered action on the server.
+    The server should have a record in &#34;services&#34; collection with name=&lt;action&gt; cmd=... and args=[...]
+
+    :param action: action name. The action should be registered with the WASP/Conduit server.
+    :param params: (optional) dictionary with action arguments.
+        Pass {stderr: True, stdout: True} to get stdout/stderr collection into DB files.
+    :return: action result json. An error is raised if the action terminated with non-zero status.
+
+    :example:
+        &gt;&gt;&gt; c = Wasp(&#34;...&#34;)
+        &gt;&gt;&gt; c.run_action(&#34;myaction&#34;, params={&#34;MY_PARAM1&#34;: &#34;1&#34;, &#34;MY_PARAM2&#34;: &#34;2&#34;})
+    &#34;&#34;&#34;
+    params = params or {}
+    # Add these to obtain stdout/stderr from the command:
+    # &#39;stdout&#39;: True,
+    # &#39;stderr&#39;: True
+    resp = self._requests_call(
+        path=[&#34;actions&#34;, &#34;services&#34;, action],
+        tags=params,
+        requests_function=self._session.post,
+        retry=False
+    )
+    if resp.status_code != 200:
+        # TODO: need to propagate error from the response
+        raise Exception(&#34;Running action failed&#34;)
+
+    return self._json_to_record(resp.json())</code></pre>
+</details>
+</dd>
+<dt id="py_wasp.Wasp.set_immutable"><code class="name flex">
+<span>def <span class="ident">set_immutable</span></span>(<span>self, collection: str, record_id: str) ‑> Dict[str, Union[str, <a title="py_wasp.FileValue" href="#py_wasp.FileValue">FileValue</a>, <a title="py_wasp.ReferenceValue" href="#py_wasp.ReferenceValue">ReferenceValue</a>, Dict[~KT, ~VT]]]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set mutable record to be Immutable.</p>
+<p>:param collection: collection name.
+:param record_id: specific record id to update.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_immutable(self, collection: str, record_id: str) \
+        -&gt; Dict[str, Union[str, FileValue, ReferenceValue, Dict]]:
+    &#34;&#34;&#34;
+    Set mutable record to be Immutable.
+
+    :param collection: collection name.
+    :param record_id: specific record id to update.
+    &#34;&#34;&#34;
+    records = self.find_records(collection=collection, record_spec=record_id, latest=True)
+    if len(records) == 0:
+        raise Exception(&#39;Error: record &#39; + str(record_id) + &#39; not found&#39;)
+    if not self._record_is_mutable(record_tags=records[0]):
+        return records[0]
+    path = [&#39;tools&#39;, collection, &#39;records&#39;, record_id, &#39;set_immutable&#39;]
+    return self._as_record(self._update_mutable(path=path, spec=dict(), remove=dict()))</code></pre>
+</details>
+</dd>
+<dt id="py_wasp.Wasp.set_mutable"><code class="name flex">
+<span>def <span class="ident">set_mutable</span></span>(<span>self, collection: str, record_id: str) ‑> Dict[str, Union[str, <a title="py_wasp.FileValue" href="#py_wasp.FileValue">FileValue</a>, <a title="py_wasp.ReferenceValue" href="#py_wasp.ReferenceValue">ReferenceValue</a>, Dict[~KT, ~VT]]]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set immmutable record to be mutable.
+:param collection: collection name.
+:param record_id: specific record id to update.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_mutable(self, collection: str, record_id: str) \
+        -&gt; Dict[str, Union[str, FileValue, ReferenceValue, Dict]]:
+    &#34;&#34;&#34;
+            Set immmutable record to be mutable.
+            :param collection: collection name.
+            :param record_id: specific record id to update. &#34;&#34;&#34;
+    records = self.find_records(collection=collection, record_spec=record_id, latest=True)
+    if len(records) == 0:
+        raise Exception(&#39;Error: record &#39; + str(record_id) + &#39; not found&#39;)
+    path = [&#39;tools&#39;, collection, &#39;records&#39;, record_id, &#39;set_mutable&#39;]
+    return self._as_record(self._update_mutable(path=path, spec=dict(), remove=dict()))</code></pre>
+</details>
+</dd>
+<dt id="py_wasp.Wasp.set_record_metadata"><code class="name flex">
+<span>def <span class="ident">set_record_metadata</span></span>(<span>self, collection: str, record_id: str, meta_part) ‑> Dict[str, Union[str, <a title="py_wasp.FileValue" href="#py_wasp.FileValue">FileValue</a>, <a title="py_wasp.ReferenceValue" href="#py_wasp.ReferenceValue">ReferenceValue</a>, Dict[~KT, ~VT]]]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Some records may have metadata. Metadata can be modified without changing a record.
+Metadata is very resource hungry for Wasp. Try using a minimum required number of meta tags.
+:param collection: collection name as a String.
+:param record_id: record "_id" tag value or unique_name tag value.
+:param meta_part: is a partial record where all keys are meta keys.
+Same format as record. If key is not a meta key - function will fail.
+If key does not exist, it will create a new meta key.
+:return: record</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_record_metadata(self,
+                        collection: str,
+                        record_id: str,
+                        meta_part) -&gt; Dict[str, Union[str, FileValue, ReferenceValue, Dict]]:
+    &#34;&#34;&#34;
+    Some records may have metadata. Metadata can be modified without changing a record.
+    Metadata is very resource hungry for Wasp. Try using a minimum required number of meta tags.
+    :param collection: collection name as a String.
+    :param record_id: record &#34;_id&#34; tag value or unique_name tag value.
+    :param meta_part: is a partial record where all keys are meta keys.
+        Same format as record. If key is not a meta key - function will fail.
+        If key does not exist, it will create a new meta key.
+    :return: record
+    &#34;&#34;&#34;
+    return self._as_record(self._put([&#39;tools&#39;, collection, &#39;records&#39;, record_id, &#39;meta&#39;], tags=meta_part))</code></pre>
+</details>
+</dd>
+<dt id="py_wasp.Wasp.update_mutable_record"><code class="name flex">
+<span>def <span class="ident">update_mutable_record</span></span>(<span>self, collection: str, record_id: str, update_spec: Dict[str, Union[str, <a title="py_wasp.FileValue" href="#py_wasp.FileValue">FileValue</a>, <a title="py_wasp.ReferenceValue" href="#py_wasp.ReferenceValue">ReferenceValue</a>, Dict[~KT, ~VT]]], remove_tags: Sequence[str] = ()) ‑> Dict[str, Union[str, int, float, bool, <a title="py_wasp.FileValue" href="#py_wasp.FileValue">FileValue</a>, <a title="py_wasp.ReferenceValue" href="#py_wasp.ReferenceValue">ReferenceValue</a>, Dict[~KT, ~VT]]]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Update mutable record.</p>
+<p>:param collection: collection name.
+:param record_id: specific record id to update.
+:param update_spec: dictionary-&gt; tags to update or create,
+:param remove_tags: list -&gt; tags names to remove.
+:return: updated record as a dictionary tag -&gt; value,
+where tag is s String and value can be a String or a FileValue.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def update_mutable_record(self, collection: str, record_id: str,
+                          update_spec: Dict[str, Union[str, FileValue, ReferenceValue, Dict]],
+                          remove_tags: Sequence[str] = ()) \
+        -&gt; Dict[str, Union[str,  int, float, bool, FileValue, ReferenceValue, Dict]]:
+    &#34;&#34;&#34;
+    Update mutable record.
+
+    :param collection: collection name.
+    :param record_id: specific record id to update.
+    :param update_spec: dictionary-&gt; tags to update or create,
+    :param remove_tags: list -&gt; tags names to remove.
+    :return: updated record as a dictionary tag -&gt; value,
+            where tag is s String and value can be a String or a FileValue.
+    &#34;&#34;&#34;
+    return self._as_record(self._update_mutable([&#39;tools&#39;, collection, &#39;records&#39;, record_id, &#39;update&#39;],
+                                                spec=Wasp._strip(update_spec.copy()), remove=remove_tags))</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="py_wasp.FileValue" href="#py_wasp.FileValue">FileValue</a></code></h4>
+<ul class="">
+<li><code><a title="py_wasp.FileValue.file_id" href="#py_wasp.FileValue.file_id">file_id</a></code></li>
+<li><code><a title="py_wasp.FileValue.file_url" href="#py_wasp.FileValue.file_url">file_url</a></code></li>
+<li><code><a title="py_wasp.FileValue.name" href="#py_wasp.FileValue.name">name</a></code></li>
+<li><code><a title="py_wasp.FileValue.to_file" href="#py_wasp.FileValue.to_file">to_file</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="py_wasp.ReferenceValue" href="#py_wasp.ReferenceValue">ReferenceValue</a></code></h4>
+<ul class="">
+<li><code><a title="py_wasp.ReferenceValue.get_entry" href="#py_wasp.ReferenceValue.get_entry">get_entry</a></code></li>
+<li><code><a title="py_wasp.ReferenceValue.get_record" href="#py_wasp.ReferenceValue.get_record">get_record</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="py_wasp.SystemInfo" href="#py_wasp.SystemInfo">SystemInfo</a></code></h4>
+<ul class="">
+<li><code><a title="py_wasp.SystemInfo.get_default_value" href="#py_wasp.SystemInfo.get_default_value">get_default_value</a></code></li>
+<li><code><a title="py_wasp.SystemInfo.get_possible_values" href="#py_wasp.SystemInfo.get_possible_values">get_possible_values</a></code></li>
+<li><code><a title="py_wasp.SystemInfo.key_tags" href="#py_wasp.SystemInfo.key_tags">key_tags</a></code></li>
+<li><code><a title="py_wasp.SystemInfo.mandatory_tags" href="#py_wasp.SystemInfo.mandatory_tags">mandatory_tags</a></code></li>
+<li><code><a title="py_wasp.SystemInfo.tags" href="#py_wasp.SystemInfo.tags">tags</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="py_wasp.ViewConfig" href="#py_wasp.ViewConfig">ViewConfig</a></code></h4>
+<ul class="">
+<li><code><a title="py_wasp.ViewConfig.Column" href="#py_wasp.ViewConfig.Column">Column</a></code></li>
+<li><code><a title="py_wasp.ViewConfig.columns" href="#py_wasp.ViewConfig.columns">columns</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="py_wasp.Wasp" href="#py_wasp.Wasp">Wasp</a></code></h4>
+<ul class="">
+<li><code><a title="py_wasp.Wasp.add_record" href="#py_wasp.Wasp.add_record">add_record</a></code></li>
+<li><code><a title="py_wasp.Wasp.delete_record" href="#py_wasp.Wasp.delete_record">delete_record</a></code></li>
+<li><code><a title="py_wasp.Wasp.download" href="#py_wasp.Wasp.download">download</a></code></li>
+<li><code><a title="py_wasp.Wasp.find_records" href="#py_wasp.Wasp.find_records">find_records</a></code></li>
+<li><code><a title="py_wasp.Wasp.get_record_history" href="#py_wasp.Wasp.get_record_history">get_record_history</a></code></li>
+<li><code><a title="py_wasp.Wasp.get_record_id" href="#py_wasp.Wasp.get_record_id">get_record_id</a></code></li>
+<li><code><a title="py_wasp.Wasp.get_system_info" href="#py_wasp.Wasp.get_system_info">get_system_info</a></code></li>
+<li><code><a title="py_wasp.Wasp.get_tag_values" href="#py_wasp.Wasp.get_tag_values">get_tag_values</a></code></li>
+<li><code><a title="py_wasp.Wasp.get_view_info" href="#py_wasp.Wasp.get_view_info">get_view_info</a></code></li>
+<li><code><a title="py_wasp.Wasp.is_mutable" href="#py_wasp.Wasp.is_mutable">is_mutable</a></code></li>
+<li><code><a title="py_wasp.Wasp.open" href="#py_wasp.Wasp.open">open</a></code></li>
+<li><code><a title="py_wasp.Wasp.public_url" href="#py_wasp.Wasp.public_url">public_url</a></code></li>
+<li><code><a title="py_wasp.Wasp.run_action" href="#py_wasp.Wasp.run_action">run_action</a></code></li>
+<li><code><a title="py_wasp.Wasp.set_immutable" href="#py_wasp.Wasp.set_immutable">set_immutable</a></code></li>
+<li><code><a title="py_wasp.Wasp.set_mutable" href="#py_wasp.Wasp.set_mutable">set_mutable</a></code></li>
+<li><code><a title="py_wasp.Wasp.set_record_metadata" href="#py_wasp.Wasp.set_record_metadata">set_record_metadata</a></code></li>
+<li><code><a title="py_wasp.Wasp.update_mutable_record" href="#py_wasp.Wasp.update_mutable_record">update_mutable_record</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
