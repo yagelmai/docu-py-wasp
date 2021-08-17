@@ -8,6 +8,7 @@ on:
     branches:
       - main
 
+
 jobs:
   docu-py-wasp:
     runs-on: self-hosted
@@ -17,20 +18,17 @@ jobs:
       
     - name: run pdoc
       run: |
-        pdoc --html py_wasp/py_wasp.py --overwrite -o docs --force
+        pdoc --html py_wasp/py_wasp.py --overwrite -o docs
         pwd
         pwd
         pwd
         ls
         mv /home/yagelmai/play-ground/pdoc-task/my_repo/docu-py-wasp/actions-runner/_work/docu-py-wasp/docu-py-wasp/docs/py_wasp.html /home/yagelmai/play-ground/pdoc-task/my_repo/docu-py-wasp/actions-runner/_work/docu-py-wasp/docu-py-wasp/docs/index.html
         
-        
     - name: Commit and push changes
       run: |
         git config --global user.name "yagelmai"
         git config --global user.email "yagel.maimon@intel.com"
-
         git add -A
         git commit -m "create py_wasp documantation"
         git push
-# vim: ts=2:sw=2
