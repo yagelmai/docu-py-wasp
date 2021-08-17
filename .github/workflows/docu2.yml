@@ -21,7 +21,6 @@ jobs:
         pdoc --html py_wasp/py_wasp.py --overwrite -o docs
         pwd
         pwd
-        pwd
         ls
         mv /home/yagelmai/play-ground/pdoc-task/my_repo/docu-py-wasp/actions-runner/_work/docu-py-wasp/docu-py-wasp/docs/py_wasp.html /home/yagelmai/play-ground/pdoc-task/my_repo/docu-py-wasp/actions-runner/_work/docu-py-wasp/docu-py-wasp/docs/index.html
         
