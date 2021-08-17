@@ -29,4 +29,5 @@ jobs:
         git config --global user.email "yagel.maimon@intel.com"
         git add -A
         git commit -m "create py_wasp documantation"
+        git pull
         git push
